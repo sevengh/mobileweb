@@ -2,7 +2,7 @@ package com.shamanayev.mobileweb
 
 import android.content.Intent
 import android.content.SharedPreferences
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_enter_url.*
 
