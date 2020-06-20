@@ -2,8 +2,8 @@ package com.shamanayev.mobileweb
 
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_enter_url.*
 
 class EnterUrlActivity : AppCompatActivity() {
@@ -16,7 +16,7 @@ class EnterUrlActivity : AppCompatActivity() {
 
         sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE);
 
-        enterButton.setOnClickListener(){
+        enterButton.setOnClickListener() {
             val editor = sharedPreferences?.edit()
 
             editor?.putString("url", urlEditText.text.toString());

@@ -1,12 +1,12 @@
 package com.shamanayev.mobileweb
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.content.SharedPreferences
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -32,8 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         if (!url.isNullOrEmpty())
             this.webView.loadUrl(url);
-        else
-        {
+        else {
             val intent = Intent(this, EnterUrlActivity::class.java)
             startActivity(intent)
         }
