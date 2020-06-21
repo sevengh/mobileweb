@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Мобильный сайт</string>
+    <string name="app_name">Мое веб-приложение</string>
     <string name="registerButton">Регистрация</string>
     <string name="enter_url">Введите URL</string>
     <string name="settings">Настройки</string>
