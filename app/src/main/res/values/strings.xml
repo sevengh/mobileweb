@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Web App</string>
+    <string name="app_name">Web App</string>
     <string name="registerButton">Register</string>
     <string name="enter_url">Enter URL</string>
     <string name="settings">Settings</string>
