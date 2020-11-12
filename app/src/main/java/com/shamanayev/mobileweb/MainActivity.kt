@@ -28,13 +28,24 @@ class MainActivity : AppCompatActivity() {
 
         sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE);
 
-        var url = sharedPreferences?.getString("url", "");
+        val url = sharedPreferences?.getString("url", "");
 
         if (!url.isNullOrEmpty())
-            this.webView.loadUrl(url);
+            if (savedInstanceState == null)
+                this.webView.loadUrl(url);
         else {
             val intent = Intent(this, EnterUrlActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        webView.saveState(outState)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        webView.restoreState(savedInstanceState)
     }
 }

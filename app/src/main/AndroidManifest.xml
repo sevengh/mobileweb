@@ -17,6 +17,7 @@
 
         <activity
             android:name=".MainActivity"
+            android:configChanges="orientation|keyboard|screenSize"
             android:theme="@style/AppTheme.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +29,7 @@
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
+
         <activity android:name=".EnterUrlActivity" />
     </application>
 

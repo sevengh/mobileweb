@@ -1,20 +1,16 @@
-<?xml version ="1.0" encoding ="utf-8"?><!--  Learn More about how to use App Actions: https://developer.android.com/guide/actions/index.html -->
+<?xml version ="1.0" encoding ="utf-8"?>
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
-        android:shortcutId="compose"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
-        android:shortcutShortLabel="@string/settings"
+        android:icon="@drawable/ic_baseline_settings_applications_24"
+        android:shortcutDisabledMessage="@string/settings"
+        android:shortcutId="compose"
         android:shortcutLongLabel="@string/settings"
-        android:shortcutDisabledMessage="@string/settings">
+        android:shortcutShortLabel="@string/settings">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.shamanayev.mobileweb"
-            android:targetClass="com.shamanayev.mobileweb.EnterUrlActivity" />
-        <!-- If your shortcut is associated with multiple intents, include them
-             here. The last intent in the list determines what the user sees when
-             they launch this shortcut. -->
+            android:targetClass="com.shamanayev.mobileweb.EnterUrlActivity"
+            android:targetPackage="com.shamanayev.mobileweb" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
-    <!-- Specify more shortcuts here. -->
 </shortcuts>
