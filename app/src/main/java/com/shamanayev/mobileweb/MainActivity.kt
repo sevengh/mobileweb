@@ -18,7 +18,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         this.webView.webViewClient = object : WebViewClient() {
-            override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
+            override fun shouldOverrideUrlLoading(
+                view: WebView,
+                request: WebResourceRequest
+            ): Boolean {
                 view.loadUrl(request.url.toString())
                 return false
             }
@@ -30,13 +33,15 @@ class MainActivity : AppCompatActivity() {
 
         val url = sharedPreferences?.getString("url", "");
 
-        if (!url.isNullOrEmpty())
-            if (savedInstanceState == null)
-                this.webView.loadUrl(url);
-        else {
+        if (url.isNullOrEmpty()) {
             val intent = Intent(this, EnterUrlActivity::class.java)
             startActivity(intent)
+            finish();
+            return;
         }
+
+        if (savedInstanceState == null)
+            this.webView.loadUrl(url);
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

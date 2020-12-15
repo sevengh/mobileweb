@@ -2,5 +2,13 @@
     <string name="app_name">Web App</string>
     <string name="registerButton">Register</string>
     <string name="enter_url">Enter URL</string>
+
+    <!--  Settings  -->
     <string name="settings">Settings</string>
+    <string name="settings_hint">To change the URL, press and hold the program icon and select settings</string>
+    <string name="settings_hint_input">Begin with https:// ...</string>
+
+    <!--  Splash  -->
+    <string name="splash_logo">Logo</string>
+    <string name="splash_text">Web App\nPRESENTS</string>
 </resources>

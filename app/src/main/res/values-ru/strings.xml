@@ -2,5 +2,13 @@
     <string name="app_name">Веб приложение</string>
     <string name="registerButton">Регистрация</string>
     <string name="enter_url">Введите URL</string>
+
+    <!--  Settings  -->
     <string name="settings">Настройки</string>
+    <string name="settings_hint">To change the URL, press and hold the program icon and select settings</string>
+    <string name="settings_hint_input">Начните с https:// ...</string>
+
+    <!--  Splash  -->
+    <string name="splash_logo">Logo</string>
+    <string name="splash_text">Веб приложение\nПРЕДСТАВЛЯЕТ</string>
 </resources>
