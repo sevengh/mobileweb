@@ -12,7 +12,7 @@
         android:layout_gravity="center"
         android:contentDescription="@string/splash_logo"
         android:scaleType="fitCenter"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@mipmap/ic_launcher_round" />
 
     <TextView
         android:layout_width="fill_parent"

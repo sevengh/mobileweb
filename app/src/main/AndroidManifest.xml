@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
+
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,9 +28,7 @@
             android:name="com.google.android.actions"
             android:resource="@xml/shortcuts" />
 
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/FullScreen" />
+        <activity android:name=".MainActivity" />
 
         <activity
             android:name=".EnterUrlActivity"

@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">Веб приложение</string>
-    <string name="registerButton">Регистрация</string>
-    <string name="enter_url">Введите URL</string>
 
     <!--  Settings  -->
+    <string name="settings_registerButton">Регистрация</string>
+    <string name="settings_enter_url">Введите URL</string>
     <string name="settings">Настройки</string>
-    <string name="settings_hint">To change the URL, press and hold the program icon and select settings</string>
-    <string name="settings_hint_input">Начните с https:// ...</string>
+    <string name="settings_hint">Чтобы изменить URL-адрес, нажмите и удерживайте значок программы и выберите настройки.</string>
+    <string name="settings_hint_input">Начните с https:// …</string>
 
     <!--  Splash  -->
-    <string name="splash_logo">Logo</string>
+    <string name="splash_logo">Логотип</string>
     <string name="splash_text">Веб приложение\nПРЕДСТАВЛЯЕТ</string>
 </resources>

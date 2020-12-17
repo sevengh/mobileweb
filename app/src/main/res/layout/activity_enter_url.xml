@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/enter_url" />
+        android:text="@string/settings_enter_url" />
 
     <EditText
         android:id="@+id/urlEditText"
@@ -24,7 +24,7 @@
         android:id="@+id/enterButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/registerButton" />
+        android:text="@string/settings_registerButton" />
 
     <TextView
         android:layout_width="match_parent"

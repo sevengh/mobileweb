@@ -27,21 +27,20 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        this.webView.settings.javaScriptEnabled = true;
-
         sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE);
 
         val url = sharedPreferences?.getString("url", "");
 
         if (url.isNullOrEmpty()) {
-            val intent = Intent(this, EnterUrlActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, EnterUrlActivity::class.java))
             finish();
             return;
         }
 
-        if (savedInstanceState == null)
+        if (savedInstanceState == null) {
+            this.webView.settings.javaScriptEnabled = true;
             this.webView.loadUrl(url);
+        }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
