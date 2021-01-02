@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">تطبيق الويب</string>
+
+    <!--  Settings  -->
+    <string name="settings_registerButton">التسجيل</string>
+    <string name="settings_enter_url">إدخال عنوان الموقع</string>
+    <string name="settings">إعدادات</string>
+    <string name="settings_hint">لتغيير عنوان URL، اضغط مع الاستمرار على أيقونة التطبيق وحدد الإعدادات.</string>
+    <string name="settings_hint_input">ابدأ بـ //:https …</string>
+    <string name="settings_wrong_url_text">عنوان موقع غير صحيح</string>
+
+    <!--  Splash  -->
+    <string name="splash_logo">شعار</string>
+</resources>

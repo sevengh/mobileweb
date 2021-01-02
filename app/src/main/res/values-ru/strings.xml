@@ -7,6 +7,7 @@
     <string name="settings">Настройки</string>
     <string name="settings_hint">Чтобы изменить URL-адрес, нажмите и удерживайте значок программы и выберите настройки.</string>
     <string name="settings_hint_input">Начните с https:// …</string>
+    <string name="settings_wrong_url_text">Неправильный адрес сайта</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Логотип</string>
