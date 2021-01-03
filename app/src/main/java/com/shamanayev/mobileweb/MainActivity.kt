@@ -13,6 +13,9 @@ class MainActivity : AppCompatActivity() {
 
     private var sharedPreferences: SharedPreferences? = null
 
+    private val userAgent =
+        "Mozilla/5.0 (Linux; Android " + android.os.Build.VERSION.RELEASE + "; Galaxy Nexus Build/JRO03C) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,9 +30,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE);
+        sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE)
 
-        val url = sharedPreferences?.getString("url", "");
+        val url = sharedPreferences?.getString("url", "")
 
         if (url.isNullOrEmpty()) {
             startActivity(Intent(this, EnterUrlActivity::class.java))
@@ -39,6 +42,7 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             this.webView.settings.javaScriptEnabled = true;
+            this.webView.settings.userAgentString = userAgent
             this.webView.loadUrl(url);
         }
     }
