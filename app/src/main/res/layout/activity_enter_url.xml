@@ -8,41 +8,26 @@
     android:padding="16dp"
     tools:context=".EnterUrlActivity">
 
-    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="2dp"
+        android:text="@string/settings_enter_url" />
+
+    <EditText
+        android:id="@+id/urlEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginBottom="10dp"
-        card_view:cardBackgroundColor="#fff"
-        card_view:cardCornerRadius="3dp">
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/settings_hint_input"
+        android:inputType="textWebEmailAddress"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:textColor="#000"
+        android:textColorHint="#909090" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:paddingVertical="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="@string/settings_enter_url"
-                android:textColor="@color/colorPrimaryDark" />
-
-            <EditText
-                android:id="@+id/urlEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:background="@null"
-                android:hint="@string/settings_hint_input"
-                android:inputType="textWebEmailAddress"
-                android:maxLines="1"
-                android:textColor="#000"
-                android:textColorHint="#909090" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/enterButton"

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Application Web</string>
+
+    <!--  Settings  -->
+    <string name="settings_registerButton">Enregistrement</string>
+    <string name="settings_enter_url">Entrer l\'URL</string>
+    <string name="settings">Réglages</string>
+    <string name="settings_hint">Pour modifier l\'URL, appuyez et maintenez l\'icône de l\'application et sélectionnez les paramètres.</string>
+    <string name="settings_hint_input">Commencez par https:// …</string>
+    <string name="settings_wrong_url_text">Adresse de site incorrecte</string>
+
+    <!--  Splash  -->
+    <string name="splash_logo">Logo</string>
+</resources>

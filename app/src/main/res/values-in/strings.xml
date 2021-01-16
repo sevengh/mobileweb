@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Aplikasi web</string>
+
+    <!--  Settings  -->
+    <string name="settings_registerButton">Registrasi</string>
+    <string name="settings_enter_url">Masukkan URL</string>
+    <string name="settings">Pengaturan</string>
+    <string name="settings_hint">Untuk mengubah URL, tekan dan tahan ikon aplikasi dan pilih pengaturan.</string>
+    <string name="settings_hint_input">Mulailah dengan https:// …</string>
+    <string name="settings_wrong_url_text">Alamat situs salah</string>
+
+    <!--  Splash  -->
+    <string name="splash_logo">Logo</string>
+</resources>

@@ -36,14 +36,15 @@ class MainActivity : AppCompatActivity() {
 
         if (url.isNullOrEmpty()) {
             startActivity(Intent(this, EnterUrlActivity::class.java))
-            finish();
-            return;
+            finish()
+            return
         }
 
         if (savedInstanceState == null) {
-            this.webView.settings.javaScriptEnabled = true;
+            this.webView.settings.javaScriptEnabled = true
+            this.webView.settings.domStorageEnabled = true
             this.webView.settings.userAgentString = userAgent
-            this.webView.loadUrl(url);
+            this.webView.loadUrl(url)
         }
     }
 

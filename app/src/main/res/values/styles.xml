@@ -10,7 +10,6 @@
     <style name="FullScreen" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-        <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
 </resources>
