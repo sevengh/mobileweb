@@ -11,8 +11,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
         android:layout_marginLeft="2dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/settings_enter_url" />
 
     <EditText
@@ -25,9 +25,7 @@
         android:inputType="textWebEmailAddress"
         android:maxLines="1"
         android:padding="8dp"
-        android:textColor="#000"
         android:textColorHint="#909090" />
-
 
     <Button
         android:id="@+id/enterButton"
