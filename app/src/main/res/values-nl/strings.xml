@@ -8,6 +8,7 @@
     <string name="settings_hint">Om de URL te wijzigen, houdt u het programmapictogram ingedrukt en selecteert u instellingen</string>
     <string name="settings_hint_input">Begin met http(s):// …</string>
     <string name="settings_wrong_url_text">Onjuist siteadres</string>
+    <string name="forced_portrait_orientation">Gedwongen portretoriëntatie</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

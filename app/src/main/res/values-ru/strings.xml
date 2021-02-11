@@ -8,6 +8,7 @@
     <string name="settings_hint">Чтобы изменить URL-адрес, нажмите и удерживайте значок программы и выберите настройки.</string>
     <string name="settings_hint_input">Начните с http(s):// …</string>
     <string name="settings_wrong_url_text">Неправильный адрес сайта</string>
+    <string name="forced_portrait_orientation">Принудительная портретная ориентация</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Логотип</string>

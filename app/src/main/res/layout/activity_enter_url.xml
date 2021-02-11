@@ -41,6 +41,13 @@
             android:background="@drawable/ic_baseline_clear_24" />
     </FrameLayout>
 
+    <CheckBox
+        android:id="@+id/orientation_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/forced_portrait_orientation" />
+
     <Button
         android:id="@+id/enterButton"
         android:layout_width="match_parent"

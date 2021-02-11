@@ -8,6 +8,7 @@
     <string name="settings_hint">Um die URL zu ändern, halten Sie das Programmsymbol gedrückt und wählen Sie Einstellungen</string>
     <string name="settings_hint_input">Beginnen Sie mit http(s):// …</string>
     <string name="settings_wrong_url_text">Falsche Site-Adresse</string>
+    <string name="forced_portrait_orientation">Erzwungene Porträtausrichtung</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

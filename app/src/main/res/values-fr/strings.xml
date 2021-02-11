@@ -8,6 +8,7 @@
     <string name="settings_hint">Pour modifier l\'URL, appuyez et maintenez l\'icône de l\'application et sélectionnez les paramètres.</string>
     <string name="settings_hint_input">Commencez par http(s):// …</string>
     <string name="settings_wrong_url_text">Adresse de site incorrecte</string>
+    <string name="forced_portrait_orientation">Orientation portrait forcée</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

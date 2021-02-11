@@ -13,6 +13,7 @@ class EnterUrlActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_enter_url)
 
         sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE);
@@ -26,8 +27,11 @@ class EnterUrlActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            val orientation = if (orientation_checkbox.isChecked()) "PORTRAIT" else ""
+
             val editor = sharedPreferences?.edit()
             editor?.putString("url", uri)
+            editor?.putString("screenOrientation", orientation)
             editor?.apply()
 
             startActivity(

@@ -2,6 +2,7 @@ package com.shamanayev.mobileweb
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
@@ -31,6 +32,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE)
+
+        if (sharedPreferences?.getString("screenOrientation", "") == "PORTRAIT")
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+        else if (sharedPreferences?.getString("screenOrientation", "") == "LANDSCAPE")
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
+        else
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
 
         val url = sharedPreferences?.getString("url", "")
 
