@@ -48,10 +48,13 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        if (savedInstanceState == null) {
-            this.webView.settings.javaScriptEnabled = true
-            this.webView.settings.domStorageEnabled = true
-            this.webView.settings.userAgentString = userAgent
+        this.webView.settings.javaScriptEnabled = true
+        this.webView.settings.domStorageEnabled = true
+        this.webView.settings.userAgentString = userAgent
+
+        if (savedInstanceState != null) {
+            this.webView.restoreState(savedInstanceState.getBundle("webViewState")!!);
+        } else {
             this.webView.loadUrl(url)
         }
     }
@@ -59,6 +62,7 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         webView.saveState(outState)
+        outState.putBundle("webViewState", outState);
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
