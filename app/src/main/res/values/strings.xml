@@ -6,7 +6,7 @@
     <string name="settings_enter_url">Enter URL</string>
     <string name="settings">Settings</string>
     <string name="settings_hint">To change the URL, press and hold the program icon and select settings</string>
-    <string name="settings_hint_input">Begin with https:// …</string>
+    <string name="settings_hint_input">Begin with http(s):// …</string>
     <string name="settings_wrong_url_text">Incorrect site address</string>
 
     <!--  Splash  -->

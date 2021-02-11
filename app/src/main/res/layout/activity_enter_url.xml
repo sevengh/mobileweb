@@ -11,21 +11,35 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="2dp"
+        android:layout_marginStart="2dp"
         android:layout_marginBottom="4dp"
         android:text="@string/settings_enter_url" />
 
-    <EditText
-        android:id="@+id/urlEditText"
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/edit_text_background"
-        android:hint="@string/settings_hint_input"
-        android:inputType="textWebEmailAddress"
-        android:maxLines="1"
-        android:padding="8dp"
-        android:textColorHint="#909090" />
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:id="@+id/urlEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:hint="@string/settings_hint_input"
+            android:inputType="textUri"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:paddingEnd="40dp"
+            android:textColorHint="#909090" />
+
+        <Button
+            android:id="@+id/clear_text"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ic_baseline_clear_24" />
+    </FrameLayout>
 
     <Button
         android:id="@+id/enterButton"

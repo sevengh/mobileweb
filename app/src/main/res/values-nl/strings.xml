@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Web Applicatie</string>
+
+    <!--  Settings  -->
+    <string name="settings_registerButton">Registreren</string>
+    <string name="settings_enter_url">URL invoeren</string>
+    <string name="settings">Instellingen</string>
+    <string name="settings_hint">Om de URL te wijzigen, houdt u het programmapictogram ingedrukt en selecteert u instellingen</string>
+    <string name="settings_hint_input">Begin met http(s):// …</string>
+    <string name="settings_wrong_url_text">Onjuist siteadres</string>
+
+    <!--  Splash  -->
+    <string name="splash_logo">Logo</string>
+</resources>

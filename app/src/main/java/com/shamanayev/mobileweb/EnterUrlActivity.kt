@@ -21,7 +21,8 @@ class EnterUrlActivity : AppCompatActivity() {
             val uri: String = urlEditText.text.toString()
 
             if (uri.isBlank() || (!uri.startsWith("https://") && !uri.startsWith("http://"))) {
-                Toast.makeText(this, getString(R.string.settings_wrong_url_text), Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.settings_wrong_url_text), Toast.LENGTH_LONG)
+                    .show()
                 return@setOnClickListener
             }
 
@@ -34,6 +35,10 @@ class EnterUrlActivity : AppCompatActivity() {
             )
 
             finish()
+        }
+
+        clear_text.setOnClickListener {
+            urlEditText.setText("")
         }
     }
 }
