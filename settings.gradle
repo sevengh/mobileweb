@@ -1,2 +1,2 @@
+rootProject.name = "MobileWeb"
 include ':app'
-rootProject.name = "Mobile Web"
