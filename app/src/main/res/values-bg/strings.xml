@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Уеб приложение</string>
+
+    <!--  Settings  -->
+    <string name="settings_registerButton">Регистрирам</string>
+    <string name="settings_enter_url">Въведете URL</string>
+    <string name="settings">Настройки</string>
+    <string name="settings_hint">За да промените URL адреса, натиснете и задръжте иконата на програмата и изберете настройки</string>
+    <string name="settings_hint_input">Започнете с http(s):// …</string>
+    <string name="settings_wrong_url_text">Неправилен адрес на сайта</string>
+    <string name="forced_portrait_orientation">Принудителна портретна ориентация</string>
+    <string name="settings_sample_url">Примерен URL адрес</string>
+    <string name="fullscreen">Режим на цял екран</string>
+
+    <!--  Splash  -->
+    <string name="splash_logo">Лого</string>
+
+</resources>

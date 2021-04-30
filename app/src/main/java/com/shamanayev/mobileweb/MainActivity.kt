@@ -5,7 +5,9 @@ import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.webkit.WebResourceRequest
+import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +19,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE)
+
+        if (sharedPreferences?.getString("fullscreen", "") == "true")
+            setFullScreen()
+
         setContentView(R.layout.activity_main)
 
         this.webView.webViewClient = object : WebViewClient() {
@@ -28,8 +36,6 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
         }
-
-        sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE)
 
         if (sharedPreferences?.getString("screenOrientation", "") == "PORTRAIT")
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
@@ -59,6 +65,9 @@ class MainActivity : AppCompatActivity() {
         webSettings.userAgentString = userAgent
         webSettings.javaScriptEnabled = true
         webSettings.domStorageEnabled = true
+        webSettings.setAppCacheEnabled(true);
+        webSettings.setAppCachePath(this.cacheDir.path);
+        webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
 
         if (savedInstanceState != null) {
             this.webView.restoreState(savedInstanceState.getBundle("webViewState")!!);
@@ -76,5 +85,15 @@ class MainActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         webView.restoreState(savedInstanceState)
+    }
+
+    fun setFullScreen() {
+        val decorView = window.decorView
+        decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                or View.SYSTEM_UI_FLAG_FULLSCREEN
+                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
     }
 }

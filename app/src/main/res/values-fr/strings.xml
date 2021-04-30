@@ -9,6 +9,8 @@
     <string name="settings_hint_input">Commencez par http(s):// …</string>
     <string name="settings_wrong_url_text">Adresse de site incorrecte</string>
     <string name="forced_portrait_orientation">Orientation portrait forcée</string>
+    <string name="settings_sample_url">Exemple d\'URL</string>
+    <string name="fullscreen">Mode plein écran</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

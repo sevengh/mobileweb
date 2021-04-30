@@ -9,6 +9,8 @@
     <string name="settings_hint_input">ابدأ بـ //:http(s) …</string>
     <string name="settings_wrong_url_text">عنوان موقع غير صحيح</string>
     <string name="forced_portrait_orientation">الاتجاه العمودي القسري</string>
+    <string name="settings_sample_url">مثال URL</string>
+    <string name="fullscreen">وضع ملء الشاشة</string>
 
     <!--  Splash  -->
     <string name="splash_logo">شعار</string>

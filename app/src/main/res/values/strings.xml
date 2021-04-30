@@ -9,7 +9,10 @@
     <string name="settings_hint_input">Begin with http(s):// …</string>
     <string name="settings_wrong_url_text">Incorrect site address</string>
     <string name="forced_portrait_orientation">Forced portrait orientation</string>
+    <string name="settings_sample_url">Example URL</string>
+    <string name="fullscreen">Full screen mode</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>
+
 </resources>

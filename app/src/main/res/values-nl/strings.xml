@@ -9,6 +9,8 @@
     <string name="settings_hint_input">Begin met http(s):// …</string>
     <string name="settings_wrong_url_text">Onjuist siteadres</string>
     <string name="forced_portrait_orientation">Gedwongen portretoriëntatie</string>
+    <string name="settings_sample_url">Voorbeeld-URL</string>
+    <string name="fullscreen">Volledig scherm</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

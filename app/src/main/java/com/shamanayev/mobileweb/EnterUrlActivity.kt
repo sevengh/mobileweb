@@ -13,10 +13,13 @@ class EnterUrlActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_enter_url)
 
         sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE);
+
+        enterSample.setOnClickListener {
+            urlEditText.setText("https://www.shamanayev.tk/")
+        }
 
         enterButton.setOnClickListener {
             val uri: String = urlEditText.text.toString()
@@ -27,11 +30,13 @@ class EnterUrlActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val orientation = if (orientation_checkbox.isChecked()) "PORTRAIT" else ""
+            val orientation = if (orientation_checkbox.isChecked) "PORTRAIT" else ""
+            val fullscreen = if (fullscreen_checkbox.isChecked) "true" else ""
 
             val editor = sharedPreferences?.edit()
             editor?.putString("url", uri)
             editor?.putString("screenOrientation", orientation)
+            editor?.putString("fullscreen", fullscreen)
             editor?.apply()
 
             startActivity(
