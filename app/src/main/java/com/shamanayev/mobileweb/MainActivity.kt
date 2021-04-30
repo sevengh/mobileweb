@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.util.Log
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -13,9 +14,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private var sharedPreferences: SharedPreferences? = null
-
-    private val userAgent =
-        "Mozilla/5.0 (Linux; Android " + android.os.Build.VERSION.RELEASE + "; Galaxy Nexus Build/JRO03C) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,11 +32,11 @@ class MainActivity : AppCompatActivity() {
         sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE)
 
         if (sharedPreferences?.getString("screenOrientation", "") == "PORTRAIT")
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         else if (sharedPreferences?.getString("screenOrientation", "") == "LANDSCAPE")
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE)
+            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         else
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
+            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
 
         val url = sharedPreferences?.getString("url", "")
 
@@ -48,9 +46,19 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        this.webView.settings.javaScriptEnabled = true
-        this.webView.settings.domStorageEnabled = true
-        this.webView.settings.userAgentString = userAgent
+        val webSettings = webView.settings
+        val userAgent = String.format(
+            "%s [%s/%s]",
+            webSettings.userAgentString,
+            "App Android",
+            BuildConfig.VERSION_NAME
+        )
+
+        Log.d("userAgent", userAgent)
+
+        webSettings.userAgentString = userAgent
+        webSettings.javaScriptEnabled = true
+        webSettings.domStorageEnabled = true
 
         if (savedInstanceState != null) {
             this.webView.restoreState(savedInstanceState.getBundle("webViewState")!!);
