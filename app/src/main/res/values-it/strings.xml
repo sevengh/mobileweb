@@ -11,7 +11,7 @@
     <string name="forced_portrait_orientation">Orientamento verticale forzato</string>
     <string name="settings_sample_url">URL di esempio</string>
     <string name="fullscreen">Modalità schermo intero</string>
-    <string name="settings_do_not_close_on_back">Non chiudere l'applicazione quando si preme il pulsante Indietro</string>
+    <string name="settings_do_not_close_on_back">Non chiudere l\'applicazione quando si preme il pulsante Indietro</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>
