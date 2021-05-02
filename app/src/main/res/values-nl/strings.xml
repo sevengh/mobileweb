@@ -11,6 +11,7 @@
     <string name="forced_portrait_orientation">Gedwongen portretoriëntatie</string>
     <string name="settings_sample_url">Voorbeeld-URL</string>
     <string name="fullscreen">Volledig scherm</string>
+    <string name="settings_do_not_close_on_back">Sluit de toepassing niet wanneer de knop Terug wordt ingedrukt</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

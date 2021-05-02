@@ -11,6 +11,7 @@
     <string name="forced_portrait_orientation">Принудителна портретна ориентация</string>
     <string name="settings_sample_url">Примерен URL адрес</string>
     <string name="fullscreen">Режим на цял екран</string>
+    <string name="settings_do_not_close_on_back">Не затваряйте приложението, когато натиснете бутона Назад</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Лого</string>

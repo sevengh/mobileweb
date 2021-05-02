@@ -72,9 +72,9 @@ class MainActivity : AppCompatActivity() {
         webSettings.domStorageEnabled = true
         webSettings.setAppCacheEnabled(true);
         webSettings.setAppCachePath(this.cacheDir.path);
-        webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
+        webSettings.cacheMode = WebSettings.LOAD_DEFAULT;
 
-        if (savedInstanceState != null) {
+        if (savedInstanceState?.getBundle("webViewState") != null) {
             this.webView.restoreState(savedInstanceState.getBundle("webViewState")!!);
         } else {
             this.webView.loadUrl(url)
@@ -82,17 +82,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
+        Log.d("MainActivity", "onSaveInstanceState")
         super.onSaveInstanceState(outState)
-        webView.saveState(outState)
-        outState.putBundle("webViewState", outState);
+        val bundle = Bundle()
+        webView.saveState(bundle)
+        outState.putBundle("webViewState", bundle);
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        Log.d("MainActivity", "onRestoreInstanceState")
         super.onRestoreInstanceState(savedInstanceState)
         webView.restoreState(savedInstanceState)
     }
 
-    fun setFullScreen() {
+    private fun setFullScreen() {
         val decorView = window.decorView
         decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
@@ -100,5 +103,12 @@ class MainActivity : AppCompatActivity() {
                 or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 or View.SYSTEM_UI_FLAG_FULLSCREEN
                 or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
+    }
+
+    override fun onBackPressed() {
+        if (sharedPreferences?.getString("move_task_back", "") == "true")
+            moveTaskToBack(true)
+        else
+            finish()
     }
 }

@@ -11,6 +11,7 @@
     <string name="forced_portrait_orientation">الاتجاه العمودي القسري</string>
     <string name="settings_sample_url">مثال URL</string>
     <string name="fullscreen">وضع ملء الشاشة</string>
+    <string name="settings_do_not_close_on_back">لا تغلق التطبيق عند الضغط على زر الرجوع</string>
 
     <!--  Splash  -->
     <string name="splash_logo">شعار</string>

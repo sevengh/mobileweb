@@ -11,6 +11,7 @@
     <string name="forced_portrait_orientation">Orientação forçada de retrato</string>
     <string name="settings_sample_url">URL de exemplo</string>
     <string name="fullscreen">Modo tela cheia</string>
+    <string name="settings_do_not_close_on_back">Não feche o aplicativo quando o botão Voltar for pressionado</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>
