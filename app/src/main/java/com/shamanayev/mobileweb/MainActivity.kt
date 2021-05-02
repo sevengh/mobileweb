@@ -53,12 +53,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         val webSettings = webView.settings
-        val userAgent = String.format(
+
+        Log.d("userAgent", webSettings.userAgentString)
+
+        var userAgent = String.format(
             "%s [%s/%s]",
             webSettings.userAgentString,
-            "App Android",
+            "Mobile Web",
             BuildConfig.VERSION_NAME
         )
+
+        userAgent = userAgent.replace("; wv", "")
 
         Log.d("userAgent", userAgent)
 

@@ -18,7 +18,7 @@ class EnterUrlActivity : AppCompatActivity() {
         sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE);
 
         enterSample.setOnClickListener {
-            urlEditText.setText("https://www.shamanayev.tk/")
+            urlEditText.setText("https://www.shamanayev.tk/mobile-web/")
         }
 
         enterButton.setOnClickListener {
