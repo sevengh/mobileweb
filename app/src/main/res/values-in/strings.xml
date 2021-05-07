@@ -15,8 +15,8 @@
     <string name="settings_camera_permission">Kamera</string>
     <string name="settings_permission">Tambahkan izin:</string>
     <string name="settings_microphone_permission">Mikropon</string>
-    <string name="settings_access_already_granded">Akses sudah diberikan</string>
-    <string name="settings_access_granded">Akses diberikan</string>
+    <string name="settings_access_already_granted">Akses sudah diberikan</string>
+    <string name="settings_access_granted">Akses diberikan</string>
     <string name="settings_hide_url_on_setup">Sembunyikan URL pada penyiapan berikutnya</string>
 
     <!--  Splash  -->

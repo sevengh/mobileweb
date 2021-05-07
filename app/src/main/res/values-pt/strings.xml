@@ -15,8 +15,8 @@
     <string name="settings_camera_permission">Câmera</string>
     <string name="settings_permission">Adicionar permissões:</string>
     <string name="settings_microphone_permission">Microfone</string>
-    <string name="settings_access_already_granded">Acesso já concedido</string>
-    <string name="settings_access_granded">Acesso concedido</string>
+    <string name="settings_access_already_granted">Acesso já concedido</string>
+    <string name="settings_access_granted">Acesso concedido</string>
     <string name="settings_hide_url_on_setup">Ocultar URL na próxima configuração</string>
 
     <!--  Splash  -->

@@ -15,8 +15,8 @@
     <string name="settings_camera_permission">آلة تصوير</string>
     <string name="settings_permission">إضافة أذونات:</string>
     <string name="settings_microphone_permission">ميكروفون</string>
-    <string name="settings_access_already_granded">تم منح حق الوصول بالفعل</string>
-    <string name="settings_access_granded">لقد تم منح الوصول</string>
+    <string name="settings_access_already_granted">تم منح حق الوصول بالفعل</string>
+    <string name="settings_access_granted">لقد تم منح الوصول</string>
     <string name="settings_hide_url_on_setup">إخفاء URL عند الإعداد التالي</string>
 
     <!--  Splash  -->

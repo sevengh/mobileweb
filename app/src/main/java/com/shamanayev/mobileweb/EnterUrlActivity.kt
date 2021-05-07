@@ -71,13 +71,13 @@ class EnterUrlActivity : AppCompatActivity() {
 
             Toast.makeText(
                 this,
-                getString(R.string.settings_access_granded),
+                getString(R.string.settings_access_granted),
                 Toast.LENGTH_SHORT
             ).show()
         } else {
             Toast.makeText(
                 this,
-                getString(R.string.settings_access_already_granded),
+                getString(R.string.settings_access_already_granted),
                 Toast.LENGTH_SHORT
             ).show()
         }
@@ -98,13 +98,13 @@ class EnterUrlActivity : AppCompatActivity() {
 
             Toast.makeText(
                 this,
-                getString(R.string.settings_access_granded),
+                getString(R.string.settings_access_granted),
                 Toast.LENGTH_SHORT
             ).show()
         } else {
             Toast.makeText(
                 this,
-                getString(R.string.settings_access_already_granded),
+                getString(R.string.settings_access_already_granted),
                 Toast.LENGTH_SHORT
             ).show()
         }

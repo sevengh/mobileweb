@@ -15,8 +15,8 @@
     <string name="settings_camera_permission">Камера</string>
     <string name="settings_permission">Добавяне на разрешения:</string>
     <string name="settings_microphone_permission">Микрофон</string>
-    <string name="settings_access_already_granded">Достъпът вече е предоставен</string>
-    <string name="settings_access_granded">Осигурен достъп</string>
+    <string name="settings_access_already_granted">Достъпът вече е предоставен</string>
+    <string name="settings_access_granted">Осигурен достъп</string>
     <string name="settings_hide_url_on_setup">Скриване на URL адреса при следващата настройка</string>
 
     <!--  Splash  -->

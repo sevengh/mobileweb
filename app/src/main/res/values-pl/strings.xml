@@ -15,8 +15,8 @@
     <string name="settings_camera_permission">Aparat fotograficzny</string>
     <string name="settings_permission">Dodaj uprawnienia:</string>
     <string name="settings_microphone_permission">Mikrofon</string>
-    <string name="settings_access_already_granded">Dostęp już przyznany</string>
-    <string name="settings_access_granded">Dostęp przyznany</string>
+    <string name="settings_access_already_granted">Dostęp już przyznany</string>
+    <string name="settings_access_granted">Dostęp przyznany</string>
     <string name="settings_hide_url_on_setup">Ukryj adres URL przy następnej konfiguracji</string>
 
     <!--  Splash  -->
