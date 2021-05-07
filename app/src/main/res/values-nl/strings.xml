@@ -8,10 +8,16 @@
     <string name="settings_hint">Om de URL te wijzigen, houdt u het programmapictogram ingedrukt en selecteert u instellingen</string>
     <string name="settings_hint_input">Begin met http(s):// …</string>
     <string name="settings_wrong_url_text">Onjuist siteadres</string>
-    <string name="forced_portrait_orientation">Gedwongen portretoriëntatie</string>
+    <string name="settings_forced_portrait_orientation">Gedwongen portretoriëntatie</string>
     <string name="settings_sample_url">Voorbeeld-URL</string>
-    <string name="fullscreen">Volledig scherm</string>
+    <string name="settings_fullscreen">Volledig scherm</string>
     <string name="settings_do_not_close_on_back">Sluit de toepassing niet wanneer de knop Terug wordt ingedrukt</string>
+    <string name="settings_camera_permission">Camera</string>
+    <string name="settings_permission">Toestemmingen toevoegen:</string>
+    <string name="settings_microphone_permission">Microfoon</string>
+    <string name="settings_access_already_granded">Toegang al verleend</string>
+    <string name="settings_access_granded">Toegang verleend</string>
+    <string name="settings_hide_url_on_setup">Verberg URL bij volgende installatie</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

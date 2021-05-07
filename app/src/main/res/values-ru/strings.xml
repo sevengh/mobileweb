@@ -8,10 +8,16 @@
     <string name="settings_hint">Чтобы изменить URL-адрес, нажмите и удерживайте значок программы и выберите настройки.</string>
     <string name="settings_hint_input">Начните с http(s):// …</string>
     <string name="settings_wrong_url_text">Неправильный адрес сайта</string>
-    <string name="forced_portrait_orientation">Принудительная портретная ориентация</string>
+    <string name="settings_forced_portrait_orientation">Принудительная портретная ориентация</string>
     <string name="settings_sample_url">Пример URL</string>
-    <string name="fullscreen">Полноэкранный режим</string>
+    <string name="settings_fullscreen">Полноэкранный режим</string>
     <string name="settings_do_not_close_on_back">Не закрывать приложение при нажатии кнопки Назад</string>
+    <string name="settings_camera_permission">Камера</string>
+    <string name="settings_permission">Добавить разрешения:</string>
+    <string name="settings_microphone_permission">Микрофон</string>
+    <string name="settings_access_already_granded">Доступ уже предоставлен</string>
+    <string name="settings_access_granded">Доступ предоставлен</string>
+    <string name="settings_hide_url_on_setup">Скрыть URL при следующей настройке</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Логотип</string>

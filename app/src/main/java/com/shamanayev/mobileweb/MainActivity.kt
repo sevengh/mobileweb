@@ -1,22 +1,26 @@
 package com.shamanayev.mobileweb
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.webkit.WebResourceRequest
-import android.webkit.WebSettings
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.webkit.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
     private var sharedPreferences: SharedPreferences? = null
 
+    @SuppressLint("SourceLockedOrientationActivity", "SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -74,10 +78,63 @@ class MainActivity : AppCompatActivity() {
         webSettings.setAppCachePath(this.cacheDir.path);
         webSettings.cacheMode = WebSettings.LOAD_DEFAULT;
 
+        webSettings.setAllowFileAccessFromFileURLs(true);
+        webSettings.setAllowUniversalAccessFromFileURLs(true);
+        webSettings.mediaPlaybackRequiresUserGesture = false
+
+        this.webView.setWebViewClient(WebViewClient())
+
+        this.webView.setWebChromeClient(object : WebChromeClient() {
+
+            override fun onPermissionRequest(request: PermissionRequest) {
+                for (r in request.resources) {
+                    if (r.equals(PermissionRequest.RESOURCE_VIDEO_CAPTURE))
+                        requestVideoAccess()
+
+                    if (r.equals(PermissionRequest.RESOURCE_AUDIO_CAPTURE))
+                        requestAudioAccess()
+                }
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    request.grant(request.resources)
+                }
+            }
+        })
+
         if (savedInstanceState?.getBundle("webViewState") != null) {
             this.webView.restoreState(savedInstanceState.getBundle("webViewState")!!);
         } else {
             this.webView.loadUrl(url)
+        }
+    }
+
+    fun requestVideoAccess() {
+        if (ContextCompat.checkSelfPermission(
+                this,
+                android.Manifest.permission.CAMERA
+            )
+            != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(android.Manifest.permission.CAMERA),
+                100
+            )
+        }
+    }
+
+    fun requestAudioAccess() {
+        if (ContextCompat.checkSelfPermission(
+                this,
+                android.Manifest.permission.RECORD_AUDIO
+            )
+            != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(android.Manifest.permission.RECORD_AUDIO),
+                100
+            )
         }
     }
 

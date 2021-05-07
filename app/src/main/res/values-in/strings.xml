@@ -8,10 +8,16 @@
     <string name="settings_hint">Untuk mengubah URL, tekan dan tahan ikon aplikasi dan pilih pengaturan.</string>
     <string name="settings_hint_input">Mulailah dengan http(s):// …</string>
     <string name="settings_wrong_url_text">Alamat situs salah</string>
-    <string name="forced_portrait_orientation">Orientasi potret paksa</string>
+    <string name="settings_forced_portrait_orientation">Orientasi potret paksa</string>
     <string name="settings_sample_url">Contoh URL</string>
-    <string name="fullscreen">Mode layar penuh</string>
+    <string name="settings_fullscreen">Mode layar penuh</string>
     <string name="settings_do_not_close_on_back">Jangan tutup aplikasi saat tombol Kembali ditekan</string>
+    <string name="settings_camera_permission">Kamera</string>
+    <string name="settings_permission">Tambahkan izin:</string>
+    <string name="settings_microphone_permission">Mikropon</string>
+    <string name="settings_access_already_granded">Akses sudah diberikan</string>
+    <string name="settings_access_granded">Akses diberikan</string>
+    <string name="settings_hide_url_on_setup">Sembunyikan URL pada penyiapan berikutnya</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

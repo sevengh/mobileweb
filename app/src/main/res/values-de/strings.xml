@@ -8,10 +8,16 @@
     <string name="settings_hint">Um die URL zu ändern, halten Sie das Programmsymbol gedrückt und wählen Sie Einstellungen</string>
     <string name="settings_hint_input">Beginnen Sie mit http(s):// …</string>
     <string name="settings_wrong_url_text">Falsche Site-Adresse</string>
-    <string name="forced_portrait_orientation">Erzwungene Porträtausrichtung</string>
+    <string name="settings_forced_portrait_orientation">Erzwungene Porträtausrichtung</string>
     <string name="settings_sample_url">Beispiel-URL</string>
-    <string name="fullscreen">Vollbildmodus</string>
+    <string name="settings_fullscreen">Vollbildmodus</string>
     <string name="settings_do_not_close_on_back">Schließen Sie die Anwendung nicht, wenn die Zurück-Taste gedrückt wird</string>
+    <string name="settings_camera_permission">Kamera</string>
+    <string name="settings_permission">Berechtigungen hinzufügen:</string>
+    <string name="settings_microphone_permission">Mikrofon</string>
+    <string name="settings_access_already_granded">Zugriff bereits gewährt</string>
+    <string name="settings_access_granded">Zugriff gewährt</string>
+    <string name="settings_hide_url_on_setup">URL beim nächsten Setup ausblenden</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

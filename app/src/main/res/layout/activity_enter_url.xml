@@ -1,87 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".EnterUrlActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="4dp"
-        android:text="@string/settings_enter_url" />
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".EnterUrlActivity">
 
-    <FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp">
-
-        <EditText
-            android:id="@+id/urlEditText"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/edit_text_background"
-            android:hint="@string/settings_hint_input"
-            android:inputType="textUri"
-            android:maxLines="1"
-            android:padding="8dp"
-            android:paddingEnd="40dp"
-            android:textColorHint="#909090" />
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/settings_enter_url" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:id="@+id/urlEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:hint="@string/settings_hint_input"
+                android:inputType="textUri"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:paddingEnd="40dp"
+                android:textColorHint="#909090" />
+
+            <Button
+                android:id="@+id/clear_text"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end|center"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/ic_baseline_clear_24" />
+        </FrameLayout>
+
+        <CheckBox
+            android:id="@+id/hide_url_on_setup_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:checked="true"
+            android:enabled="false"
+            android:text="@string/settings_hide_url_on_setup" />
+
+        <CheckBox
+            android:id="@+id/orientation_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/settings_forced_portrait_orientation" />
+
+        <CheckBox
+            android:id="@+id/fullscreen_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/settings_fullscreen" />
+
+        <CheckBox
+            android:id="@+id/do_not_close_on_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:checked="true"
+            android:text="@string/settings_do_not_close_on_back" />
 
         <Button
-            android:id="@+id/clear_text"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="end|center"
-            android:layout_marginEnd="7dp"
-            android:background="@drawable/ic_baseline_clear_24" />
-    </FrameLayout>
+            android:id="@+id/enterButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_blue_round"
+            android:text="@string/settings_registerButton"
+            android:textColor="#fff" />
 
-    <CheckBox
-        android:id="@+id/orientation_checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/forced_portrait_orientation" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="@string/settings_hint" />
 
-    <CheckBox
-        android:id="@+id/fullscreen_checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="@string/fullscreen" />
+        <Button
+            android:id="@+id/enterSample"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_sample_url"
+            android:minHeight="40dp"
+            android:paddingHorizontal="25dp"
+            android:text="@string/settings_sample_url"
+            android:textColor="#fff" />
 
-    <CheckBox
-        android:id="@+id/do_not_close_on_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:checked="true"
-        android:text="@string/settings_do_not_close_on_back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/settings_permission" />
 
-    <Button
-        android:id="@+id/enterButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_register"
-        android:text="@string/settings_registerButton"
-        android:textColor="#fff" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="10dp"
-        android:text="@string/settings_hint" />
+            <Button
+                android:id="@+id/cameraPermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_blue_round"
+                android:paddingHorizontal="15dp"
+                android:text="@string/settings_camera_permission"
+                android:textColor="#fff" />
 
-    <Button
-        android:id="@+id/enterSample"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_sample_url"
-        android:paddingHorizontal="15dp"
-        android:text="@string/settings_sample_url"
-        android:textColor="#fff" />
-</LinearLayout>
+            <Button
+                android:id="@+id/microphonePermission"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_blue_round"
+                android:paddingHorizontal="15dp"
+                android:text="@string/settings_microphone_permission"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -8,10 +8,16 @@
     <string name="settings_hint">Aby zmienić adres URL, naciśnij i przytrzymaj ikonę aplikacji i wybierz ustawienia.</string>
     <string name="settings_hint_input">Zacznij od http(s):// …</string>
     <string name="settings_wrong_url_text">Nieprawidłowy adres witryny</string>
-    <string name="forced_portrait_orientation">Wymuszona orientacja pionowa</string>
+    <string name="settings_forced_portrait_orientation">Wymuszona orientacja pionowa</string>
     <string name="settings_sample_url">Przykładowy adres URL</string>
-    <string name="fullscreen">Pełny ekran</string>
+    <string name="settings_fullscreen">Pełny ekran</string>
     <string name="settings_do_not_close_on_back">Nie zamykaj aplikacji po naciśnięciu przycisku Wstecz</string>
+    <string name="settings_camera_permission">Aparat fotograficzny</string>
+    <string name="settings_permission">Dodaj uprawnienia:</string>
+    <string name="settings_microphone_permission">Mikrofon</string>
+    <string name="settings_access_already_granded">Dostęp już przyznany</string>
+    <string name="settings_access_granded">Dostęp przyznany</string>
+    <string name="settings_hide_url_on_setup">Ukryj adres URL przy następnej konfiguracji</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>
