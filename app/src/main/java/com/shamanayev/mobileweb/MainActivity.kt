@@ -163,6 +163,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+        if (webView.canGoBack()) {
+            webView.goBack();
+            return
+        }
+
         if (sharedPreferences?.getString("move_task_back", "") == "true")
             moveTaskToBack(true)
         else
