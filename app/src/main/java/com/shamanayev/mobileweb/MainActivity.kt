@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
+import java.net.URI
 
 
 class MainActivity : AppCompatActivity() {
@@ -35,13 +36,29 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
+        val url = sharedPreferences?.getString("url", "")
+
         this.webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(
                 view: WebView,
                 request: WebResourceRequest
             ): Boolean {
-                view.loadUrl(request.url.toString())
+                if (sharedPreferences?.getString("keepInDomain", "") == "true" && !isFalse(url, request.url.toString()))
+                    view.loadData(getString(R.string.noAccess), "text/html", "UTF-8")
+                else
+                    view.loadUrl(request.url.toString())
+
                 return false
+            }
+
+            private fun isFalse(urlBase: String?, urlNew: String?): Boolean {
+                return getDomainName(urlBase.toString()) == getDomainName(urlNew.toString())
+            }
+
+            private fun getDomainName(url: String): String? {
+                val uri = URI(url)
+                val domain: String? = uri.host
+                return if (domain?.startsWith("www.") == true) domain?.substring(4) else domain
             }
         }
 
@@ -51,8 +68,6 @@ class MainActivity : AppCompatActivity() {
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         else
             requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
-
-        val url = sharedPreferences?.getString("url", "")
 
         if (url.isNullOrEmpty()) {
             startActivity(Intent(this, EnterUrlActivity::class.java))
@@ -86,10 +101,7 @@ class MainActivity : AppCompatActivity() {
         webSettings.setAllowUniversalAccessFromFileURLs(true);
         webSettings.mediaPlaybackRequiresUserGesture = false
 
-        this.webView.setWebViewClient(WebViewClient())
-
-        this.webView.setWebChromeClient(object : WebChromeClient() {
-
+        this.webView.webChromeClient = object : WebChromeClient() {
             override fun onPermissionRequest(request: PermissionRequest) {
                 for (r in request.resources) {
                     if (r.equals(PermissionRequest.RESOURCE_VIDEO_CAPTURE))
@@ -103,7 +115,7 @@ class MainActivity : AppCompatActivity() {
                     request.grant(request.resources)
                 }
             }
-        })
+        }
 
         if (savedInstanceState?.getBundle("webViewState") != null) {
             this.webView.restoreState(savedInstanceState.getBundle("webViewState")!!);

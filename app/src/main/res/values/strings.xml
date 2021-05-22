@@ -19,8 +19,12 @@
     <string name="settings_access_granted">Access granted</string>
     <string name="settings_hide_url_on_setup">Hide URL on next setup</string>
     <string name="settings_keepTheScreenOn">Keep the screen on</string>
+    <string name="settings_keepInDomain">Block access outside the site</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>
+
+    <!--  Main Activity -->
+    <string name="noAccess">No access</string>
 
 </resources>

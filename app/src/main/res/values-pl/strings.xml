@@ -19,7 +19,12 @@
     <string name="settings_access_granted">Dostęp przyznany</string>
     <string name="settings_hide_url_on_setup">Ukryj adres URL przy następnej konfiguracji</string>
     <string name="settings_keepTheScreenOn">Nie wyłączaj ekranu</string>
+    <string name="settings_keepInDomain">Zablokuj dostęp poza witryną</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>
+
+    <!--  Main Activity -->
+    <string name="noAccess">Brak dostępu</string>
+
 </resources>

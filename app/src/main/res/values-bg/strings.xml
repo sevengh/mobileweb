@@ -19,8 +19,12 @@
     <string name="settings_access_granted">Осигурен достъп</string>
     <string name="settings_hide_url_on_setup">Скриване на URL адреса при следващата настройка</string>
     <string name="settings_keepTheScreenOn">Дръжте екрана включен</string>
+    <string name="settings_keepInDomain">Блокирайте достъпа извън сайта</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Лого</string>
+
+    <!--  Main Activity -->
+    <string name="noAccess">Няма достъп</string>
 
 </resources>

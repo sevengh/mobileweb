@@ -19,7 +19,12 @@
     <string name="settings_access_granted">لقد تم منح الوصول</string>
     <string name="settings_hide_url_on_setup">إخفاء URL عند الإعداد التالي</string>
     <string name="settings_keepTheScreenOn">استمر في تشغيل الشاشة</string>
+    <string name="settings_keepInDomain">منع الوصول خارج الموقع</string>
 
     <!--  Splash  -->
     <string name="splash_logo">شعار</string>
+
+    <!--  Main Activity -->
+    <string name="noAccess">ممنوع الدخول</string>
+
 </resources>

@@ -67,6 +67,13 @@
             android:text="@string/settings_fullscreen" />
 
         <CheckBox
+            android:id="@+id/keepinDomain_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/settings_keepInDomain" />
+
+        <CheckBox
             android:id="@+id/keepScreenOn_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
