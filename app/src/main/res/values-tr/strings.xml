@@ -18,6 +18,7 @@
     <string name="settings_access_already_granted">Erişim zaten verildi</string>
     <string name="settings_access_granted">Erişim izni</string>
     <string name="settings_hide_url_on_setup">Sonraki kurulumda URL\'yi gizle</string>
+    <string name="settings_keepTheScreenOn">Ekranı açık tut</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

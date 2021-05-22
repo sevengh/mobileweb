@@ -36,12 +36,14 @@ class EnterUrlActivity : AppCompatActivity() {
             val orientation = if (orientation_checkbox.isChecked) "PORTRAIT" else ""
             val fullscreen = if (fullscreen_checkbox.isChecked) "true" else ""
             val moveTaskBack = if (do_not_close_on_back.isChecked) "true" else ""
+            val keepScreenOn = if (keepScreenOn_checkbox.isChecked) "true" else ""
 
             val editor = sharedPreferences?.edit()
             editor?.putString("url", uri)
             editor?.putString("screenOrientation", orientation)
             editor?.putString("fullscreen", fullscreen)
             editor?.putString("move_task_back", moveTaskBack)
+            editor?.putString("keepScreenOn", keepScreenOn)
             editor?.apply()
 
             startActivity(

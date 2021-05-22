@@ -9,6 +9,7 @@ import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.WindowManager
 import android.webkit.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -28,6 +29,9 @@ class MainActivity : AppCompatActivity() {
 
         if (sharedPreferences?.getString("fullscreen", "") == "true")
             setFullScreen()
+
+        if (sharedPreferences?.getString("keepScreenOn", "") == "true")
+            window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         setContentView(R.layout.activity_main)
 

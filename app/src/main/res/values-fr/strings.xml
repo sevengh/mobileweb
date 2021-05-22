@@ -18,6 +18,7 @@
     <string name="settings_access_already_granted">Accès déjà accordé</string>
     <string name="settings_access_granted">Accès autorisé</string>
     <string name="settings_hide_url_on_setup">Masquer l\'URL lors de la prochaine configuration</string>
+    <string name="settings_keepTheScreenOn">Gardez l\'écran allumé</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

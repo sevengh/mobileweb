@@ -18,6 +18,7 @@
     <string name="settings_access_already_granted">Access already granted</string>
     <string name="settings_access_granted">Access granted</string>
     <string name="settings_hide_url_on_setup">Hide URL on next setup</string>
+    <string name="settings_keepTheScreenOn">Keep the screen on</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

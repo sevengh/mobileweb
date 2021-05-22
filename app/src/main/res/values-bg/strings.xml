@@ -18,6 +18,7 @@
     <string name="settings_access_already_granted">Достъпът вече е предоставен</string>
     <string name="settings_access_granted">Осигурен достъп</string>
     <string name="settings_hide_url_on_setup">Скриване на URL адреса при следващата настройка</string>
+    <string name="settings_keepTheScreenOn">Дръжте екрана включен</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Лого</string>
