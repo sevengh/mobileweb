@@ -20,6 +20,7 @@
     <string name="settings_hide_url_on_setup">إخفاء URL عند الإعداد التالي</string>
     <string name="settings_keepTheScreenOn">استمر في تشغيل الشاشة</string>
     <string name="settings_keepInDomain">منع الوصول خارج الموقع</string>
+    <string name="settings_application_autostart">بدء تشغيل التطبيق</string>
 
     <!--  Splash  -->
     <string name="splash_logo">شعار</string>

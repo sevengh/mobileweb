@@ -20,6 +20,7 @@
     <string name="settings_hide_url_on_setup">URL beim nächsten Setup ausblenden</string>
     <string name="settings_keepTheScreenOn">Lass den Bildschirm eingeschaltet</string>
     <string name="settings_keepInDomain">Blockieren Sie den Zugriff außerhalb der Site</string>
+    <string name="settings_application_autostart">Autostart der Anwendung</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

@@ -81,6 +81,13 @@
             android:text="@string/settings_keepTheScreenOn" />
 
         <CheckBox
+            android:id="@+id/autostart_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/settings_application_autostart" />
+
+        <CheckBox
             android:id="@+id/do_not_close_on_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -20,6 +20,7 @@
     <string name="settings_hide_url_on_setup">Sonraki kurulumda URL\'yi gizle</string>
     <string name="settings_keepTheScreenOn">Ekranı açık tut</string>
     <string name="settings_keepInDomain">Site dışına erişimi engelle</string>
+    <string name="settings_application_autostart">Uygulama otomatik başlatma</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

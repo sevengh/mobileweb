@@ -17,7 +17,6 @@ import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
 import java.net.URI
 
-
 class MainActivity : AppCompatActivity() {
 
     private var sharedPreferences: SharedPreferences? = null
@@ -43,7 +42,11 @@ class MainActivity : AppCompatActivity() {
                 view: WebView,
                 request: WebResourceRequest
             ): Boolean {
-                if (sharedPreferences?.getString("keepInDomain", "") == "true" && !isFalse(url, request.url.toString()))
+                if (sharedPreferences?.getString("keepInDomain", "") == "true" && !isFalse(
+                        url,
+                        request.url.toString()
+                    )
+                )
                     view.loadData(getString(R.string.noAccess), "text/html", "UTF-8")
                 else
                     view.loadUrl(request.url.toString())

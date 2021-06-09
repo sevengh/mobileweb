@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">웹 애플리케이션</string>
+
+    <!--  Settings  -->
+    <string name="settings_registerButton">체크인</string>
+    <string name="settings_enter_url">URL 입력</string>
+    <string name="settings">설정</string>
+    <string name="settings_hint">URL을 변경하려면 앱 아이콘을 길게 누르고 설정을 선택하세요.</string>
+    <string name="settings_hint_input">http(s)://... 로 시작</string>
+    <string name="settings_wrong_url_text">잘못된 사이트 주소</string>
+    <string name="settings_forced_portrait_orientation">강제 세로 방향</string>
+    <string name="settings_sample_url">예제 URL</string>
+    <string name="settings_fullscreen">풀 스크린 모드</string>
+    <string name="settings_do_not_close_on_back">뒤로 버튼을 누를 때 앱을 닫지 마십시오.</string>
+    <string name="settings_camera_permission">카메라</string>
+    <string name="settings_permission">권한 추가 :</string>
+    <string name="settings_microphone_permission">마이크로폰</string>
+    <string name="settings_access_already_granted">이미 허가 된 액세스</string>
+    <string name="settings_access_granted">액세스 권한 부여</string>
+    <string name="settings_hide_url_on_setup">다음 설정에서 URL 숨기기</string>
+    <string name="settings_keepTheScreenOn">화면 유지</string>
+    <string name="settings_keepInDomain">사이트 외부 액세스 차단</string>
+    <string name="settings_application_autostart">애플리케이션 자동 시작</string>
+
+    <!--  Splash  -->
+    <string name="splash_logo">심벌 마크</string>
+
+    <!--  Main Activity -->
+    <string name="noAccess">접근 금지</string>
+
+</resources>

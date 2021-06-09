@@ -20,6 +20,7 @@
     <string name="settings_hide_url_on_setup">Verberg URL bij volgende installatie</string>
     <string name="settings_keepTheScreenOn">Houd het scherm aan</string>
     <string name="settings_keepInDomain">Blokkeer de toegang buiten de site</string>
+    <string name="settings_application_autostart">Applicatie automatisch starten</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>
