@@ -52,12 +52,23 @@
             android:enabled="false"
             android:text="@string/settings_hide_url_on_setup" />
 
-        <CheckBox
-            android:id="@+id/orientation_checkbox"
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="@string/settings_forced_portrait_orientation" />
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/orientation_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/settings_forced_portrait_orientation" />
+
+            <Spinner
+                android:id="@+id/screen_orientations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Orientations" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
         <CheckBox
             android:id="@+id/fullscreen_checkbox"

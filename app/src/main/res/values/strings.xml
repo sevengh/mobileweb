@@ -8,7 +8,7 @@
     <string name="settings_hint">To change the URL, press and hold the program icon and select settings</string>
     <string name="settings_hint_input">Begin with http(s):// …</string>
     <string name="settings_wrong_url_text">Incorrect site address</string>
-    <string name="settings_forced_portrait_orientation">Forced portrait orientation</string>
+    <string name="settings_forced_portrait_orientation">Forced screen orientation:</string>
     <string name="settings_sample_url">Example URL</string>
     <string name="settings_fullscreen">Full screen mode</string>
     <string name="settings_do_not_close_on_back">Don\'t close application when Back button is pressed</string>

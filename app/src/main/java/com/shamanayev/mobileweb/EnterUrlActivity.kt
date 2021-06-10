@@ -39,6 +39,7 @@ class EnterUrlActivity : AppCompatActivity() {
             val keepScreenOn = if (keepScreenOn_checkbox.isChecked) "true" else ""
             val keepInDomain = if (keepinDomain_checkbox.isChecked) "true" else ""
             val autostart = if (autostart_checkbox.isChecked) "true" else ""
+            val sp = screen_orientations.selectedItem.toString();
 
             val editor = sharedPreferences?.edit()
             editor?.putString("url", uri)
@@ -48,6 +49,7 @@ class EnterUrlActivity : AppCompatActivity() {
             editor?.putString("keepScreenOn", keepScreenOn)
             editor?.putString("keepInDomain", keepInDomain)
             editor?.putString("autostart", autostart)
+            editor?.putString("sp", sp)
             editor?.apply()
 
             startActivity(
