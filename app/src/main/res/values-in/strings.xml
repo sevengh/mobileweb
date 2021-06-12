@@ -8,7 +8,7 @@
     <string name="settings_hint">Untuk mengubah URL, tekan dan tahan ikon aplikasi dan pilih pengaturan.</string>
     <string name="settings_hint_input">Mulailah dengan http(s):// …</string>
     <string name="settings_wrong_url_text">Alamat situs salah</string>
-    <string name="settings_forced_portrait_orientation">Orientasi potret paksa</string>
+    <string name="settings_lock_the_screen_orientation">Orientasi layar kunci:</string>
     <string name="settings_sample_url">Contoh URL</string>
     <string name="settings_fullscreen">Mode layar penuh</string>
     <string name="settings_do_not_close_on_back">Jangan tutup aplikasi saat tombol Kembali ditekan</string>

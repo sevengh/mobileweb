@@ -8,7 +8,7 @@
     <string name="settings_hint">Um die URL zu ändern, halten Sie das Programmsymbol gedrückt und wählen Sie Einstellungen</string>
     <string name="settings_hint_input">Beginnen Sie mit http(s):// …</string>
     <string name="settings_wrong_url_text">Falsche Site-Adresse</string>
-    <string name="settings_forced_portrait_orientation">Erzwungene Porträtausrichtung</string>
+    <string name="settings_lock_the_screen_orientation">Ausrichtung des Sperrbildschirms:</string>
     <string name="settings_sample_url">Beispiel-URL</string>
     <string name="settings_fullscreen">Vollbildmodus</string>
     <string name="settings_do_not_close_on_back">Schließen Sie die Anwendung nicht, wenn die Zurück-Taste gedrückt wird</string>

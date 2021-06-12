@@ -52,23 +52,19 @@
             android:enabled="false"
             android:text="@string/settings_hide_url_on_setup" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <CheckBox
+            android:id="@+id/isSetFixedOrientation_checkbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <CheckBox
-                android:id="@+id/orientation_checkbox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/settings_forced_portrait_orientation" />
+            android:text="@string/settings_lock_the_screen_orientation" />
 
-            <Spinner
-                android:id="@+id/screen_orientations"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/Orientations" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        <Spinner
+            android:id="@+id/screen_orientations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/Orientations" />
 
         <CheckBox
             android:id="@+id/fullscreen_checkbox"
@@ -120,15 +116,21 @@
             android:layout_marginVertical="10dp"
             android:text="@string/settings_hint" />
 
-        <Button
-            android:id="@+id/enterSample"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_sample_url"
-            android:minHeight="40dp"
-            android:paddingHorizontal="25dp"
-            android:text="@string/settings_sample_url"
-            android:textColor="#fff" />
+            android:layout_gravity="center_vertical|center_horizontal">
+            <Button
+                android:id="@+id/enterSample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_sample_url"
+                android:minHeight="40dp"
+                android:paddingHorizontal="25dp"
+                android:text="@string/settings_sample_url"
+                android:textColor="#fff" />
+        </RelativeLayout>
 
         <TextView
             android:layout_width="wrap_content"

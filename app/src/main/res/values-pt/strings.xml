@@ -8,7 +8,7 @@
     <string name="settings_hint">Para alterar o URL, pressione e segure o ícone do programa e selecione as configurações</string>
     <string name="settings_hint_input">Comece com http(s):// …</string>
     <string name="settings_wrong_url_text">Endereço de site incorreto</string>
-    <string name="settings_forced_portrait_orientation">Orientação forçada de retrato</string>
+    <string name="settings_lock_the_screen_orientation">Orientação da tela de bloqueio:</string>
     <string name="settings_sample_url">URL de exemplo</string>
     <string name="settings_fullscreen">Modo tela cheia</string>
     <string name="settings_do_not_close_on_back">Não feche o aplicativo quando o botão Voltar for pressionado</string>

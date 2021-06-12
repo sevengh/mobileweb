@@ -8,7 +8,7 @@
     <string name="settings_hint">URL을 변경하려면 앱 아이콘을 길게 누르고 설정을 선택하세요.</string>
     <string name="settings_hint_input">http(s)://... 로 시작</string>
     <string name="settings_wrong_url_text">잘못된 사이트 주소</string>
-    <string name="settings_forced_portrait_orientation">강제 세로 방향</string>
+    <string name="settings_lock_the_screen_orientation">잠금 화면 방향 :</string>
     <string name="settings_sample_url">예제 URL</string>
     <string name="settings_fullscreen">풀 스크린 모드</string>
     <string name="settings_do_not_close_on_back">뒤로 버튼을 누를 때 앱을 닫지 마십시오.</string>

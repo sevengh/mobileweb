@@ -8,7 +8,7 @@
     <string name="settings_hint">Чтобы изменить URL-адрес, нажмите и удерживайте значок программы и выберите настройки.</string>
     <string name="settings_hint_input">Начните с http(s):// …</string>
     <string name="settings_wrong_url_text">Неправильный адрес сайта</string>
-    <string name="settings_forced_portrait_orientation">Принудительная портретная ориентация</string>
+    <string name="settings_lock_the_screen_orientation">Установить ориентацию экрана:</string>
     <string name="settings_sample_url">Пример URL</string>
     <string name="settings_fullscreen">Полноэкранный режим</string>
     <string name="settings_do_not_close_on_back">Не закрывать приложение при нажатии кнопки Назад</string>

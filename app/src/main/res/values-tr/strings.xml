@@ -8,7 +8,7 @@
     <string name="settings_hint">URL\'yi değiştirmek için program simgesine basılı tutun ve ayarları seçin</string>
     <string name="settings_hint_input">http(s)//… ile başlayın</string>
     <string name="settings_wrong_url_text">Yanlış site adresi</string>
-    <string name="settings_forced_portrait_orientation">Zorunlu dikey yönlendirme</string>
+    <string name="settings_lock_the_screen_orientation">Kilit ekranı yönü:</string>
     <string name="settings_sample_url">Örnek URL</string>
     <string name="settings_fullscreen">Tam ekran modu</string>
     <string name="settings_do_not_close_on_back">Geri düğmesine basıldığında uygulamayı kapatmayın</string>

@@ -8,7 +8,7 @@
     <string name="settings_hint">Om de URL te wijzigen, houdt u het programmapictogram ingedrukt en selecteert u instellingen</string>
     <string name="settings_hint_input">Begin met http(s):// …</string>
     <string name="settings_wrong_url_text">Onjuist siteadres</string>
-    <string name="settings_forced_portrait_orientation">Gedwongen portretoriëntatie</string>
+    <string name="settings_lock_the_screen_orientation">Oriëntatie scherm vergrendelen:</string>
     <string name="settings_sample_url">Voorbeeld-URL</string>
     <string name="settings_fullscreen">Volledig scherm</string>
     <string name="settings_do_not_close_on_back">Sluit de toepassing niet wanneer de knop Terug wordt ingedrukt</string>

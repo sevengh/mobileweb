@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_enter_url.*
+import java.util.*
 
 class EnterUrlActivity : AppCompatActivity() {
 
@@ -33,23 +34,27 @@ class EnterUrlActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val orientation = if (orientation_checkbox.isChecked) "PORTRAIT" else ""
+            val screenOrientation =
+                when {
+                    isSetFixedOrientation_checkbox.isChecked && screen_orientations.selectedItemPosition == 0 -> "PORTRAIT"
+                    isSetFixedOrientation_checkbox.isChecked && screen_orientations.selectedItemPosition == 1 -> "LANDSCAPE"
+                    else -> ""
+                }
+
             val fullscreen = if (fullscreen_checkbox.isChecked) "true" else ""
             val moveTaskBack = if (do_not_close_on_back.isChecked) "true" else ""
             val keepScreenOn = if (keepScreenOn_checkbox.isChecked) "true" else ""
             val keepInDomain = if (keepinDomain_checkbox.isChecked) "true" else ""
             val autostart = if (autostart_checkbox.isChecked) "true" else ""
-            val sp = screen_orientations.selectedItem.toString();
 
             val editor = sharedPreferences?.edit()
             editor?.putString("url", uri)
-            editor?.putString("screenOrientation", orientation)
+            editor?.putString("screenOrientation", screenOrientation)
             editor?.putString("fullscreen", fullscreen)
             editor?.putString("move_task_back", moveTaskBack)
             editor?.putString("keepScreenOn", keepScreenOn)
             editor?.putString("keepInDomain", keepInDomain)
             editor?.putString("autostart", autostart)
-            editor?.putString("sp", sp)
             editor?.apply()
 
             startActivity(

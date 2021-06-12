@@ -65,12 +65,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        if (sharedPreferences?.getString("screenOrientation", "") == "PORTRAIT")
-            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-        else if (sharedPreferences?.getString("screenOrientation", "") == "LANDSCAPE")
-            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-        else
-            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+        requestedOrientation = when {
+            sharedPreferences?.getString("screenOrientation", "") == "PORTRAIT" -> ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+            sharedPreferences?.getString("screenOrientation", "") == "LANDSCAPE" -> ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+            else -> ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+        }
 
         if (url.isNullOrEmpty()) {
             startActivity(Intent(this, EnterUrlActivity::class.java))

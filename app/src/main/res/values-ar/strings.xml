@@ -8,7 +8,7 @@
     <string name="settings_hint">لتغيير عنوان URL، اضغط مع الاستمرار على أيقونة التطبيق وحدد الإعدادات.</string>
     <string name="settings_hint_input">ابدأ بـ //:http(s) …</string>
     <string name="settings_wrong_url_text">عنوان موقع غير صحيح</string>
-    <string name="settings_forced_portrait_orientation">الاتجاه العمودي القسري</string>
+    <string name="settings_lock_the_screen_orientation">اتجاه شاشة القفل:</string>
     <string name="settings_sample_url">مثال URL</string>
     <string name="settings_fullscreen">وضع ملء الشاشة</string>
     <string name="settings_do_not_close_on_back">لا تغلق التطبيق عند الضغط على زر الرجوع</string>
