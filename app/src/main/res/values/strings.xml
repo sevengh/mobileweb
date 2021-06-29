@@ -27,5 +27,7 @@
 
     <!--  Main Activity -->
     <string name="noAccess">No access</string>
+    <string name="noInternet">No internet connection or other error.</string>
+    <string name="reload">Reload this page</string>
 
 </resources>

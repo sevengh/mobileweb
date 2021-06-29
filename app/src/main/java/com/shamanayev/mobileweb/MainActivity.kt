@@ -38,10 +38,47 @@ class MainActivity : AppCompatActivity() {
         val url = sharedPreferences?.getString("url", "")
 
         this.webView.webViewClient = object : WebViewClient() {
+            var reloadUrl = ""
+
+            private fun onResume() {
+                Log.i("---", "onResume")
+                webView.reload()
+            }
+
+            override fun onReceivedError(
+                view: WebView?,
+                errorCode: Int,
+                description: String?,
+                failingUrl: String?
+            ) {
+                try {
+                    webView.stopLoading()
+                } catch (e: Exception) {
+                }
+
+                if (webView.canGoBack()) {
+                    webView.goBack();
+                }
+
+                Log.i("---", "onReceivedError code:$errorCode")
+
+                if (reloadUrl.isEmpty())
+                    reloadUrl = view?.url.toString()
+
+                val c =
+                    "<p>" + getString(R.string.noInternet) + " <a href=\"" + reloadUrl + "\">"+getString(R.string.reload)+"</a>" + "</p>"
+
+                view?.loadDataWithBaseURL(reloadUrl, c, "text/html", "UTF-8", null)
+
+                super.onReceivedError(webView, errorCode, description, failingUrl);
+            }
+
             override fun shouldOverrideUrlLoading(
                 view: WebView,
                 request: WebResourceRequest
             ): Boolean {
+                Log.d("---", "shouldOverrideUrlLoading")
+
                 if (sharedPreferences?.getString("keepInDomain", "") == "true" && !isFalse(
                         url,
                         request.url.toString()
@@ -61,13 +98,19 @@ class MainActivity : AppCompatActivity() {
             private fun getDomainName(url: String): String? {
                 val uri = URI(url)
                 val domain: String? = uri.host
-                return if (domain?.startsWith("www.") == true) domain?.substring(4) else domain
+                return if (domain?.startsWith("www.") == true) domain.substring(4) else domain
             }
         }
 
         requestedOrientation = when {
-            sharedPreferences?.getString("screenOrientation", "") == "PORTRAIT" -> ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-            sharedPreferences?.getString("screenOrientation", "") == "LANDSCAPE" -> ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+            sharedPreferences?.getString(
+                "screenOrientation",
+                ""
+            ) == "PORTRAIT" -> ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+            sharedPreferences?.getString(
+                "screenOrientation",
+                ""
+            ) == "LANDSCAPE" -> ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
             else -> ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
         }
 

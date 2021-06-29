@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Aplicație web</string>
+
+    <!--  Settings  -->
+    <string name="settings_registerButton">Inregistreaza-te</string>
+    <string name="settings_enter_url">Introdu URL-ul</string>
+    <string name="settings">Setări</string>
+    <string name="settings_hint">Pentru a schimba adresa URL, țineți apăsată pictograma programului și selectați setările</string>
+    <string name="settings_hint_input">Începeți cu http(s):// …</string>
+    <string name="settings_wrong_url_text">Adresă incorectă a site-ului</string>
+    <string name="settings_lock_the_screen_orientation">Orientarea ecranului de blocare:</string>
+    <string name="settings_sample_url">Exemplu URL</string>
+    <string name="settings_fullscreen">Modul ecran întreg</string>
+    <string name="settings_do_not_close_on_back">Nu închideți aplicația când este apăsat butonul Înapoi</string>
+    <string name="settings_camera_permission">aparat foto</string>
+    <string name="settings_permission">Adăugați permisiuni:</string>
+    <string name="settings_microphone_permission">Microfon</string>
+    <string name="settings_access_already_granted">Acces deja acordat</string>
+    <string name="settings_access_granted">Acces permis</string>
+    <string name="settings_hide_url_on_setup">Ascundeți adresa URL la următoarea configurare</string>
+    <string name="settings_keepTheScreenOn">Păstrați ecranul aprins</string>
+    <string name="settings_keepInDomain">Blocați accesul în afara site-ului</string>
+    <string name="settings_application_autostart">Pornirea automată a aplicației</string>
+
+    <!--  Splash  -->
+    <string name="splash_logo">Siglă</string>
+
+    <!--  Main Activity -->
+    <string name="noAccess">Fără acces</string>
+    <string name="noInternet">Nu există conexiune la internet sau altă eroare.</string>
+    <string name="reload">Reîncărcați această pagină</string>
+
+</resources>
