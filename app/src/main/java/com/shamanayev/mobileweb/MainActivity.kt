@@ -66,7 +66,10 @@ class MainActivity : AppCompatActivity() {
                     reloadUrl = view?.url.toString()
 
                 val c =
-                    "<p>" + getString(R.string.noInternet) + " <a href=\"" + reloadUrl + "\">"+getString(R.string.reload)+"</a>" + "</p>"
+                    "<p>" + getString(R.string.noInternet) + " <a href=\"" + reloadUrl + "\">" +
+                            getString(R.string.reload) +
+                            "</a>" +
+                            "</p>"
 
                 view?.loadDataWithBaseURL(reloadUrl, c, "text/html", "UTF-8", null)
 
@@ -80,7 +83,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("---", "shouldOverrideUrlLoading")
 
                 if (sharedPreferences?.getString("keepInDomain", "") == "true"
-                    && !isSameDomain(url, request.url.toString()                    )
+                    && !isSameDomain(url, request.url.toString())
                 )
                     view.loadData(getString(R.string.noAccess), "text/html", "UTF-8")
                 else
