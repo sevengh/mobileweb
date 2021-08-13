@@ -79,10 +79,8 @@ class MainActivity : AppCompatActivity() {
             ): Boolean {
                 Log.d("---", "shouldOverrideUrlLoading")
 
-                if (sharedPreferences?.getString("keepInDomain", "") == "true" && !isFalse(
-                        url,
-                        request.url.toString()
-                    )
+                if (sharedPreferences?.getString("keepInDomain", "") == "true"
+                    && !isSameDomain(url, request.url.toString()                    )
                 )
                     view.loadData(getString(R.string.noAccess), "text/html", "UTF-8")
                 else
@@ -91,7 +89,7 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
 
-            private fun isFalse(urlBase: String?, urlNew: String?): Boolean {
+            private fun isSameDomain(urlBase: String?, urlNew: String?): Boolean {
                 return getDomainName(urlBase.toString()) == getDomainName(urlNew.toString())
             }
 
