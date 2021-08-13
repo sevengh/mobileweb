@@ -42,10 +42,10 @@ class MainActivity : AppCompatActivity() {
                 view: WebView,
                 request: WebResourceRequest
             ): Boolean {
-                if (sharedPreferences?.getString("keepInDomain", "") == "true" && !isFalse(
-                        url,
-                        request.url.toString()
-                    )
+                Log.d("---", "shouldOverrideUrlLoading")
+
+                if (sharedPreferences?.getString("keepInDomain", "") == "true"
+                    && !isSameDomain(url, request.url.toString())
                 )
                     view.loadData(getString(R.string.noAccess), "text/html", "UTF-8")
                 else
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                 return false
             }
 
-            private fun isFalse(urlBase: String?, urlNew: String?): Boolean {
+            private fun isSameDomain(urlBase: String?, urlNew: String?): Boolean {
                 return getDomainName(urlBase.toString()) == getDomainName(urlNew.toString())
             }
 
@@ -66,8 +66,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         requestedOrientation = when {
-            sharedPreferences?.getString("screenOrientation", "") == "PORTRAIT" -> ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-            sharedPreferences?.getString("screenOrientation", "") == "LANDSCAPE" -> ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+            sharedPreferences?.getString(
+                "screenOrientation",
+                ""
+            ) == "PORTRAIT" -> ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+            sharedPreferences?.getString(
+                "screenOrientation",
+                ""
+            ) == "LANDSCAPE" -> ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
             else -> ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
         }
 
