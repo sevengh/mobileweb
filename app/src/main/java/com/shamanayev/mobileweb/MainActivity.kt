@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -19,6 +20,7 @@ import java.net.URI
 
 class MainActivity : AppCompatActivity() {
 
+    private val tag = "MainActivity"
     private var sharedPreferences: SharedPreferences? = null
 
     @SuppressLint("SourceLockedOrientationActivity", "SetJavaScriptEnabled")
@@ -31,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             setFullScreen()
 
         if (sharedPreferences?.getString("keepScreenOn", "") == "true")
-            window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+            window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         setContentView(R.layout.activity_main)
 
@@ -41,46 +43,55 @@ class MainActivity : AppCompatActivity() {
             var reloadUrl = ""
 
             private fun onResume() {
-                Log.i("---", "onResume")
+                Log.d(tag, "onResume")
                 webView.reload()
+            }
+
+            override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                Log.d(tag, "onPageStarted url: $url")
+            }
+
+            override fun onPageFinished(view: WebView?, url: String?) {
+                Log.d(tag, "onPageFinished url: $url")
             }
 
             override fun onReceivedError(
                 view: WebView?,
-                errorCode: Int,
-                description: String?,
-                failingUrl: String?
+                request: WebResourceRequest,
+                error: WebResourceError
             ) {
-                try {
-                    webView.stopLoading()
-                } catch (e: Exception) {
+                Log.d(tag, "onReceivedError (simple)")
+
+                if (sharedPreferences?.getString("showCustomErrorPage", "") == "true") {
+                    try {
+                        webView.stopLoading()
+                    } catch (e: Exception) {
+                    }
+
+                    if (reloadUrl.isEmpty())
+                        reloadUrl = view?.url.toString()
+
+//                    if (webView.canGoBack())
+//                        webView.goBack()
+
+                    val c =
+                        "<p>" + getString(R.string.noInternet) +
+                                " " +
+                                "<a href=\"javascript:history.back()\">" +
+                                getString(R.string.reload) +
+                                "</a>" +
+                                "</p>"
+
+                    view?.loadDataWithBaseURL(null, c, "text/html", "UTF-8", null)
                 }
 
-                if (webView.canGoBack()) {
-                    webView.goBack();
-                }
-
-                Log.i("---", "onReceivedError code:$errorCode")
-
-                if (reloadUrl.isEmpty())
-                    reloadUrl = view?.url.toString()
-
-                val c =
-                    "<p>" + getString(R.string.noInternet) + " <a href=\"" + reloadUrl + "\">" +
-                            getString(R.string.reload) +
-                            "</a>" +
-                            "</p>"
-
-                view?.loadDataWithBaseURL(reloadUrl, c, "text/html", "UTF-8", null)
-
-                super.onReceivedError(webView, errorCode, description, failingUrl);
             }
 
             override fun shouldOverrideUrlLoading(
                 view: WebView,
                 request: WebResourceRequest
             ): Boolean {
-                Log.d("---", "shouldOverrideUrlLoading")
+                Log.d(tag, "shouldOverrideUrlLoading")
 
                 if (sharedPreferences?.getString("keepInDomain", "") == "true"
                     && !isSameDomain(url, request.url.toString())
@@ -139,12 +150,11 @@ class MainActivity : AppCompatActivity() {
         webSettings.userAgentString = userAgent
         webSettings.javaScriptEnabled = true
         webSettings.domStorageEnabled = true
-        webSettings.setAppCacheEnabled(true);
-        webSettings.setAppCachePath(this.cacheDir.path);
-        webSettings.cacheMode = WebSettings.LOAD_DEFAULT;
-
-        webSettings.setAllowFileAccessFromFileURLs(true);
-        webSettings.setAllowUniversalAccessFromFileURLs(true);
+        webSettings.setAppCacheEnabled(true)
+        webSettings.setAppCachePath(this.cacheDir.path)
+        webSettings.cacheMode = WebSettings.LOAD_DEFAULT
+        webSettings.allowFileAccessFromFileURLs = true
+        webSettings.allowUniversalAccessFromFileURLs = true
         webSettings.mediaPlaybackRequiresUserGesture = false
 
         this.webView.webChromeClient = object : WebChromeClient() {
@@ -164,7 +174,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (savedInstanceState?.getBundle("webViewState") != null) {
-            this.webView.restoreState(savedInstanceState.getBundle("webViewState")!!);
+            this.webView.restoreState(savedInstanceState.getBundle("webViewState")!!)
         } else {
             this.webView.loadUrl(url)
         }
@@ -205,7 +215,7 @@ class MainActivity : AppCompatActivity() {
         super.onSaveInstanceState(outState)
         val bundle = Bundle()
         webView.saveState(bundle)
-        outState.putBundle("webViewState", bundle);
+        outState.putBundle("webViewState", bundle)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
@@ -225,8 +235,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+        Log.d(tag, "onBackPressed()")
+
         if (webView.canGoBack()) {
-            webView.goBack();
+            webView.goBack()
             return
         }
 

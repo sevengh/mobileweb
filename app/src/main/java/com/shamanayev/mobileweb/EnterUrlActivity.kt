@@ -42,10 +42,11 @@ class EnterUrlActivity : AppCompatActivity() {
                 }
 
             val fullscreen = if (fullscreen_checkbox.isChecked) "true" else ""
-            val moveTaskBack = if (do_not_close_on_back.isChecked) "true" else ""
+            val moveTaskBack = if (doNotCloseOnBack_checkbox.isChecked) "true" else ""
             val keepScreenOn = if (keepScreenOn_checkbox.isChecked) "true" else ""
             val keepInDomain = if (keepinDomain_checkbox.isChecked) "true" else ""
             val autostart = if (autostart_checkbox.isChecked) "true" else ""
+            val showCustomErrorPage = if (showCustomErrorPage_checkbox.isChecked) "true" else ""
 
             val editor = sharedPreferences?.edit()
             editor?.putString("url", uri)
@@ -55,6 +56,7 @@ class EnterUrlActivity : AppCompatActivity() {
             editor?.putString("keepScreenOn", keepScreenOn)
             editor?.putString("keepInDomain", keepInDomain)
             editor?.putString("autostart", autostart)
+            editor?.putString("showCustomErrorPage", showCustomErrorPage)
             editor?.apply()
 
             startActivity(
