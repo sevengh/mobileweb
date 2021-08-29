@@ -40,12 +40,6 @@ class MainActivity : AppCompatActivity() {
         val url = sharedPreferences?.getString("url", "")
 
         this.webView.webViewClient = object : WebViewClient() {
-            var reloadUrl = ""
-
-            private fun onResume() {
-                Log.d(tag, "onResume")
-                webView.reload()
-            }
 
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 Log.d(tag, "onPageStarted url: $url")
@@ -60,19 +54,13 @@ class MainActivity : AppCompatActivity() {
                 request: WebResourceRequest,
                 error: WebResourceError
             ) {
-                Log.d(tag, "onReceivedError (simple)")
+                Log.d(tag, "onReceivedError request.url: " + request.url.toString())
 
                 if (sharedPreferences?.getString("showCustomErrorPage", "") == "true") {
                     try {
                         webView.stopLoading()
                     } catch (e: Exception) {
                     }
-
-                    if (reloadUrl.isEmpty())
-                        reloadUrl = view?.url.toString()
-
-//                    if (webView.canGoBack())
-//                        webView.goBack()
 
                     val c =
                         "<p>" + getString(R.string.noInternet) +
@@ -82,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                                 "</a>" +
                                 "</p>"
 
-                    view?.loadDataWithBaseURL(null, c, "text/html", "UTF-8", null)
+                    view?.loadData(c, "text/html", "UTF-8")
                 }
 
             }
