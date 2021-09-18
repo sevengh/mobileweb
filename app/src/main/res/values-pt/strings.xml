@@ -21,6 +21,7 @@
     <string name="settings_keepTheScreenOn">Mantenha a tela ligada</string>
     <string name="settings_keepInDomain">Bloqueie o acesso fora do site</string>
     <string name="settings_application_autostart">Autoinicialização do aplicativo</string>
+    <string name="settings_show_custom_error_page">Mostrar página de erro personalizada</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

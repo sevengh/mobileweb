@@ -21,6 +21,7 @@
     <string name="settings_keepTheScreenOn">Houd het scherm aan</string>
     <string name="settings_keepInDomain">Blokkeer de toegang buiten de site</string>
     <string name="settings_application_autostart">Applicatie automatisch starten</string>
+    <string name="settings_show_custom_error_page">Aangepaste foutpagina weergeven</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

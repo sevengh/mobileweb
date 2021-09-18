@@ -21,6 +21,7 @@
     <string name="settings_keepTheScreenOn">استمر في تشغيل الشاشة</string>
     <string name="settings_keepInDomain">منع الوصول خارج الموقع</string>
     <string name="settings_application_autostart">بدء تشغيل التطبيق</string>
+    <string name="settings_show_custom_error_page">إظهار صفحة الخطأ المخصصة</string>
 
     <!--  Splash  -->
     <string name="splash_logo">شعار</string>

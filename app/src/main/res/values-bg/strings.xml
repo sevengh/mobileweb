@@ -21,6 +21,7 @@
     <string name="settings_keepTheScreenOn">Дръжте екрана включен</string>
     <string name="settings_keepInDomain">Блокирайте достъпа извън сайта</string>
     <string name="settings_application_autostart">Автостартиране на приложението</string>
+    <string name="settings_show_custom_error_page">Показване на страница с персонализирани грешки</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Лого</string>

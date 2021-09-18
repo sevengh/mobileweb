@@ -108,7 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:checked="true"
-            android:text="Show custom error page" />
+            android:text="@string/settings_show_custom_error_page" />
 
         <Button
             android:id="@+id/enterButton"

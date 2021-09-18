@@ -21,6 +21,7 @@
     <string name="settings_keepTheScreenOn">Nie wyłączaj ekranu</string>
     <string name="settings_keepInDomain">Zablokuj dostęp poza witryną</string>
     <string name="settings_application_autostart">Autostart aplikacji</string>
+    <string name="settings_show_custom_error_page">Pokaż niestandardową stronę błędu</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>
