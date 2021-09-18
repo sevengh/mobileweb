@@ -92,7 +92,6 @@ class MainActivity : AppCompatActivity() {
 
                     loadContent(string)
                 }
-
             }
 
             override fun shouldOverrideUrlLoading(
