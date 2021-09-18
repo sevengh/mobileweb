@@ -27,5 +27,7 @@
 
     <!--  Main Activity -->
     <string name="noAccess">Geen toegang</string>
+    <string name="noInternet">Geen internetverbinding of andere fout.</string>
+    <string name="reload">Herlaad deze pagina.</string>
 
 </resources>

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -32,13 +33,48 @@ class MainActivity : AppCompatActivity() {
             setFullScreen()
 
         if (sharedPreferences?.getString("keepScreenOn", "") == "true")
-            window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+            window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         setContentView(R.layout.activity_main)
 
         val url = sharedPreferences?.getString("url", "")
 
         this.webView.webViewClient = object : WebViewClient() {
+
+            override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                Log.d(tag, "onPageStarted url: $url")
+            }
+
+            override fun onPageFinished(view: WebView?, url: String?) {
+                Log.d(tag, "onPageFinished url: $url")
+            }
+
+            override fun onReceivedError(
+                view: WebView?,
+                request: WebResourceRequest,
+                error: WebResourceError
+            ) {
+                Log.d(tag, "onReceivedError request.url: " + request.url.toString())
+
+                if (sharedPreferences?.getString("showCustomErrorPage", "") == "true") {
+                    try {
+                        webView.stopLoading()
+                    } catch (e: Exception) {
+                    }
+
+                    val c =
+                        "<p>" + getString(R.string.noInternet) +
+                                " " +
+                                "<a href=\"javascript:history.back()\">" +
+                                getString(R.string.reload) +
+                                "</a>" +
+                                "</p>"
+
+                    view?.loadData(c, "text/html", "UTF-8")
+                }
+
+            }
+
             override fun shouldOverrideUrlLoading(
                 view: WebView,
                 request: WebResourceRequest
@@ -62,7 +98,7 @@ class MainActivity : AppCompatActivity() {
             private fun getDomainName(url: String): String? {
                 val uri = URI(url)
                 val domain: String? = uri.host
-                return if (domain?.startsWith("www.") == true) domain?.substring(4) else domain
+                return if (domain?.startsWith("www.") == true) domain.substring(4) else domain
             }
         }
 
@@ -102,12 +138,11 @@ class MainActivity : AppCompatActivity() {
         webSettings.userAgentString = userAgent
         webSettings.javaScriptEnabled = true
         webSettings.domStorageEnabled = true
-        webSettings.setAppCacheEnabled(true);
-        webSettings.setAppCachePath(this.cacheDir.path);
-        webSettings.cacheMode = WebSettings.LOAD_DEFAULT;
-
-        webSettings.setAllowFileAccessFromFileURLs(true);
-        webSettings.setAllowUniversalAccessFromFileURLs(true);
+        webSettings.setAppCacheEnabled(true)
+        webSettings.setAppCachePath(this.cacheDir.path)
+        webSettings.cacheMode = WebSettings.LOAD_DEFAULT
+        webSettings.allowFileAccessFromFileURLs = true
+        webSettings.allowUniversalAccessFromFileURLs = true
         webSettings.mediaPlaybackRequiresUserGesture = false
 
         this.webView.webChromeClient = object : WebChromeClient() {
@@ -127,7 +162,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (savedInstanceState?.getBundle("webViewState") != null) {
-            this.webView.restoreState(savedInstanceState.getBundle("webViewState")!!);
+            this.webView.restoreState(savedInstanceState.getBundle("webViewState")!!)
         } else {
             this.webView.loadUrl(url)
         }
@@ -168,7 +203,7 @@ class MainActivity : AppCompatActivity() {
         super.onSaveInstanceState(outState)
         val bundle = Bundle()
         webView.saveState(bundle)
-        outState.putBundle("webViewState", bundle);
+        outState.putBundle("webViewState", bundle)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
@@ -188,8 +223,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+        Log.d(tag, "onBackPressed()")
+
         if (webView.canGoBack()) {
-            webView.goBack();
+            webView.goBack()
             return
         }
 

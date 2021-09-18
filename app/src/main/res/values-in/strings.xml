@@ -27,5 +27,7 @@
 
     <!--  Main Activity -->
     <string name="noAccess">Tidak ada akses</string>
+    <string name="noInternet">Tidak ada koneksi internet atau kesalahan lainnya.</string>
+    <string name="reload">Muat ulang halaman ini.</string>
 
 </resources>
