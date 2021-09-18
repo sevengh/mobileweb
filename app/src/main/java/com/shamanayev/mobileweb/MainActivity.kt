@@ -19,6 +19,7 @@ import java.net.URI
 
 class MainActivity : AppCompatActivity() {
 
+    private val tag = "MainActivity"
     private var sharedPreferences: SharedPreferences? = null
 
     @SuppressLint("SourceLockedOrientationActivity", "SetJavaScriptEnabled")
@@ -42,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                 view: WebView,
                 request: WebResourceRequest
             ): Boolean {
-                Log.d("---", "shouldOverrideUrlLoading")
+                Log.d(tag, "shouldOverrideUrlLoading")
 
                 if (sharedPreferences?.getString("keepInDomain", "") == "true"
                     && !isSameDomain(url, request.url.toString())
