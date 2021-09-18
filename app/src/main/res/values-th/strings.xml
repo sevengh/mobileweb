@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">เว็บแอป</string>
+
+    <!--  Settings  -->
+    <string name="settings_registerButton">ลงทะเบียน</string>
+    <string name="settings_enter_url">ป้อน URL</string>
+    <string name="settings">การตั้งค่า</string>
+    <string name="settings_hint">หากต้องการเปลี่ยน URL ให้กดไอคอนโปรแกรมค้างไว้แล้วเลือกการตั้งค่า</string>
+    <string name="settings_hint_input">เริ่มด้วย http(s):// …</string>
+    <string name="settings_wrong_url_text">ที่อยู่เว็บไซต์ไม่ถูกต้อง</string>
+    <string name="settings_lock_the_screen_orientation">การวางแนวหน้าจอล็อก:</string>
+    <string name="settings_sample_url">ตัวอย่าง URL</string>
+    <string name="settings_fullscreen">โหมดเต็มหน้าจอ</string>
+    <string name="settings_do_not_close_on_back">อย่าปิดแอปพลิเคชั่นเมื่อกดปุ่มย้อนกลับ</string>
+    <string name="settings_camera_permission">กล้อง</string>
+    <string name="settings_permission">เพิ่มการอนุญาต:</string>
+    <string name="settings_microphone_permission">ไมโครโฟน</string>
+    <string name="settings_access_already_granted">ให้สิทธิ์การเข้าถึงแล้ว</string>
+    <string name="settings_access_granted">เข้าถึงได้</string>
+    <string name="settings_hide_url_on_setup">ซ่อน URL ในการตั้งค่าครั้งต่อไป</string>
+    <string name="settings_keepTheScreenOn">เปิดหน้าจอค้างไว้</string>
+    <string name="settings_keepInDomain">ปิดกั้นการเข้าถึงภายนอกไซต์</string>
+    <string name="settings_application_autostart">แอปพลิเคชัน autostart</string>
+    <string name="settings_show_custom_error_page">แสดงหน้าข้อผิดพลาดที่กำหนดเอง</string>
+
+    <!--  Splash  -->
+    <string name="splash_logo">โลโก้</string>
+
+    <!--  Main Activity -->
+    <string name="noAccess">ไม่มีการเข้าถึง</string>
+    <string name="noInternet">ไม่มีการเชื่อมต่ออินเทอร์เน็ตหรือข้อผิดพลาดอื่นๆ</string>
+    <string name="reload">โหลดหน้านี้ซ้ำ</string>
+
+</resources>
