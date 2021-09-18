@@ -28,7 +28,7 @@
 
     <!--  Main Activity -->
     <string name="noAccess">접근 금지</string>
-    <string name="noInternet">인터넷 연결 또는 기타 오류가 없습니다.</string>
-    <string name="reload">이 페이지를 새로 고침하세요.</string>
+    <string name="noInternet">인터넷 연결 또는 기타 오류가 없습니다</string>
+    <string name="reload">이 페이지를 새로 고침하세요</string>
 
 </resources>

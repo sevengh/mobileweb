@@ -16,6 +16,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.IOException
+import java.io.InputStream
 import java.net.URI
 
 class MainActivity : AppCompatActivity() {
@@ -54,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                 request: WebResourceRequest,
                 error: WebResourceError
             ) {
-                Log.d(tag, "onReceivedError request.url: " + request.url.toString())
+                Log.d(tag, "onReceivedError request. Url: " + request.url.toString())
 
                 if (sharedPreferences?.getString("showCustomErrorPage", "") == "true") {
                     try {
@@ -62,15 +64,23 @@ class MainActivity : AppCompatActivity() {
                     } catch (e: Exception) {
                     }
 
-                    val c =
-                        "<p>" + getString(R.string.noInternet) +
-                                " " +
-                                "<a href=\"javascript:history.back()\">" +
-                                getString(R.string.reload) +
-                                "</a>" +
-                                "</p>"
+                    var string = ""
 
-                    view?.loadData(c, "text/html", "UTF-8")
+                    try {
+                        val inputStream: InputStream = assets.open("check_internet.html")
+                        val size: Int = inputStream.available()
+                        val buffer = ByteArray(size)
+                        inputStream.read(buffer)
+                        string = String(buffer)
+                    } catch (e: IOException) {
+                        e.printStackTrace()
+                    }
+
+                    string = string
+                        .replace("%noInternet%", getString(R.string.noInternet))
+                        .replace("%reload%", getString(R.string.reload))
+
+                    loadContent(string)
                 }
 
             }
@@ -234,5 +244,9 @@ class MainActivity : AppCompatActivity() {
             moveTaskToBack(true)
         else
             finish()
+    }
+
+    private fun loadContent(content: String) {
+        webView.loadData(content, "text/html; charset=utf-8", "UTF-8")
     }
 }

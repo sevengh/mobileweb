@@ -28,7 +28,7 @@
 
     <!--  Main Activity -->
     <string name="noAccess">Нет доступа</string>
-    <string name="noInternet">Нет подключения к Интернету или другая ошибка.</string>
-    <string name="reload">Обновить эту страницу.</string>
+    <string name="noInternet">Нет подключения к Интернету или другая ошибка</string>
+    <string name="reload">Обновить эту страницу</string>
 
 </resources>

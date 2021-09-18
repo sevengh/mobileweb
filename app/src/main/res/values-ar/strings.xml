@@ -28,7 +28,7 @@
 
     <!--  Main Activity -->
     <string name="noAccess">ممنوع الدخول</string>
-    <string name="noInternet">لا يوجد اتصال بالإنترنت أو خطأ آخر.</string>
-    <string name="reload">اعد تحميل هذه الصفحة.</string>
+    <string name="noInternet">لا يوجد اتصال بالإنترنت أو خطأ آخر</string>
+    <string name="reload">اعد تحميل هذه الصفحة</string>
 
 </resources>

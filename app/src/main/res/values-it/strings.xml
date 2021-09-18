@@ -28,7 +28,7 @@
 
     <!--  Main Activity -->
     <string name="noAccess">Nessun accesso</string>
-    <string name="noInternet">Nessuna connessione Internet o altro errore.</string>
-    <string name="reload">Ricarica questa pagina.</string>
+    <string name="noInternet">Nessuna connessione Internet o altro errore</string>
+    <string name="reload">Ricarica questa pagina</string>
 
 </resources>
