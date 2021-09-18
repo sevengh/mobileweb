@@ -22,6 +22,7 @@
     <string name="settings_keepInDomain">ปิดกั้นการเข้าถึงภายนอกไซต์</string>
     <string name="settings_application_autostart">แอปพลิเคชัน autostart</string>
     <string name="settings_show_custom_error_page">แสดงหน้าข้อผิดพลาดที่กำหนดเอง</string>
+    <string name="settings_disable_selection">Disable text selection</string>
 
     <!--  Splash  -->
     <string name="splash_logo">โลโก้</string>

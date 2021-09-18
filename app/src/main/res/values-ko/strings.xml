@@ -22,6 +22,7 @@
     <string name="settings_keepInDomain">사이트 외부 액세스 차단</string>
     <string name="settings_application_autostart">애플리케이션 자동 시작</string>
     <string name="settings_show_custom_error_page">사용자 정의 오류 페이지 표시</string>
+    <string name="settings_disable_selection">Disable text selection</string>
 
     <!--  Splash  -->
     <string name="splash_logo">심벌 마크</string>

@@ -22,6 +22,7 @@
     <string name="settings_keepInDomain">Blockieren Sie den Zugriff außerhalb der Site</string>
     <string name="settings_application_autostart">Autostart der Anwendung</string>
     <string name="settings_show_custom_error_page">Benutzerdefinierte Fehlerseite anzeigen</string>
+    <string name="settings_disable_selection">Disable text selection</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

@@ -74,7 +74,7 @@
             android:text="@string/settings_fullscreen" />
 
         <CheckBox
-            android:id="@+id/keepinDomain_checkbox"
+            android:id="@+id/keepInDomain_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -110,6 +110,14 @@
             android:checked="true"
             android:text="@string/settings_show_custom_error_page" />
 
+        <CheckBox
+            android:id="@+id/disableSelection_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:checked="true"
+            android:text="@string/settings_disable_selection" />
+
         <Button
             android:id="@+id/enterButton"
             android:layout_width="match_parent"
@@ -128,6 +136,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical|center_horizontal">
+
             <Button
                 android:id="@+id/enterSample"
                 android:layout_width="wrap_content"

@@ -19,6 +19,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 import java.io.InputStream
 import java.net.URI
+import android.view.View.OnLongClickListener
+
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,6 +44,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val url = sharedPreferences?.getString("url", "")
+
+        if (sharedPreferences?.getString("disableSelection", "") == "true")
+        {
+            webView.setOnLongClickListener { true }
+            webView.isLongClickable = false
+        }
 
         this.webView.webViewClient = object : WebViewClient() {
 

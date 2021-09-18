@@ -22,6 +22,7 @@
     <string name="settings_keepInDomain">Blokir akses di luar situs</string>
     <string name="settings_application_autostart">Aplikasi mulai otomatis</string>
     <string name="settings_show_custom_error_page">Tampilkan halaman kesalahan khusus</string>
+    <string name="settings_disable_selection">Disable text selection</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>
