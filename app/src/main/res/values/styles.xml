@@ -12,4 +12,9 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
+
+    <!-- Splash theme. -->
+    <style name="SplashTheme" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
 </resources>
