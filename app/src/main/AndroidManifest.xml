@@ -16,15 +16,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/FullScreen"
+        android:theme="@style/MainTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
 
         <activity
             android:exported="true"
             android:name=".MainActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|layoutDirection|uiMode|smallestScreenSize"
-            android:theme="@style/SplashTheme">
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|layoutDirection|uiMode|smallestScreenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -36,7 +35,7 @@
 
         <activity
             android:name=".EnterUrlActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/SettingsTheme" />
 
         <receiver
             android:name=".BootUpReceiver"

@@ -32,10 +32,10 @@
                 android:layout_centerInParent="true"
                 android:background="@drawable/button_orange_for_url"
                 android:minHeight="20dp"
-                android:paddingHorizontal="25dp"
+                android:paddingHorizontal="15dp"
                 android:text="@string/settings_sample_url"
-                android:textSize="10dp"
-                android:textColor="#fff" />
+                android:textColor="#fff"
+                android:textSize="10dp" />
         </RelativeLayout>
 
         <FrameLayout
