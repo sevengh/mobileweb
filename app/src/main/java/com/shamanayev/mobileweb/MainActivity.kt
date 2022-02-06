@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val url: String =
-            if (action === "com.shamanayev.mobileweb.Main")
+            if (action == "com.shamanayev.mobileweb.Main")
                 EnterUrlActivity.demoUrl
             else
                 sharedPreferences?.getString("url", "").toString()
