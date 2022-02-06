@@ -29,6 +29,37 @@ class EnterUrlActivity : AppCompatActivity() {
             hide_url_on_setup_checkbox.isChecked = false
         }
 
+        if (sharedPreferences?.getString("screenOrientation", "") != "")
+        {
+            isSetFixedOrientation_checkbox.isChecked = true
+
+            if (sharedPreferences?.getString("screenOrientation", "PORTRAIT") == "PORTRAIT")
+                screen_orientations.setSelection(0)
+            else
+                screen_orientations.setSelection(1)
+        }
+
+        if (sharedPreferences?.getString("fullscreen", "false") == "true")
+            fullscreen_checkbox.isChecked = true
+
+        if (sharedPreferences?.getString("keepScreenOn", "false") == "true")
+            keepScreenOn_checkbox.isChecked = true
+
+        if (sharedPreferences?.getString("keepInDomain", "true") == "false")
+            keepInDomain_checkbox.isChecked = false
+
+        if (sharedPreferences?.getString("autostart", "false") == "true")
+            autostart_checkbox.isChecked = true
+
+        if (sharedPreferences?.getString("move_task_back", "true") == "false")
+            doNotCloseOnBack_checkbox.isChecked = false
+
+        if (sharedPreferences?.getString("showCustomErrorPage", "true") == "false")
+            showCustomErrorPage_checkbox.isChecked = false
+
+        if (sharedPreferences?.getString("disableSelection", "true") == "false")
+            disableSelection_checkbox.isChecked = false
+
         enterSample.setOnClickListener {
             urlEditText.setText(demoUrl)
         }
@@ -62,13 +93,13 @@ class EnterUrlActivity : AppCompatActivity() {
                     else -> ""
                 }
 
-            val fullscreen = if (fullscreen_checkbox.isChecked) "true" else ""
-            val moveTaskBack = if (doNotCloseOnBack_checkbox.isChecked) "true" else ""
-            val keepScreenOn = if (keepScreenOn_checkbox.isChecked) "true" else ""
-            val keepInDomain = if (keepInDomain_checkbox.isChecked) "true" else ""
-            val autostart = if (autostart_checkbox.isChecked) "true" else ""
-            val showCustomErrorPage = if (showCustomErrorPage_checkbox.isChecked) "true" else ""
-            val disableSelection = if (disableSelection_checkbox.isChecked) "true" else ""
+            val fullscreen = if (fullscreen_checkbox.isChecked) "true" else "false"
+            val moveTaskBack = if (doNotCloseOnBack_checkbox.isChecked) "true" else "false"
+            val keepScreenOn = if (keepScreenOn_checkbox.isChecked) "true" else "false"
+            val keepInDomain = if (keepInDomain_checkbox.isChecked) "true" else "false"
+            val autostart = if (autostart_checkbox.isChecked) "true" else "false"
+            val showCustomErrorPage = if (showCustomErrorPage_checkbox.isChecked) "true" else "false"
+            val disableSelection = if (disableSelection_checkbox.isChecked) "true" else "false"
             val hideUrlOnSetup = if (hide_url_on_setup_checkbox.isChecked) "true" else "false"
 
             val editor = sharedPreferences?.edit()
