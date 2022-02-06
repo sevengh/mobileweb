@@ -19,9 +19,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 import java.io.InputStream
 import java.net.URI
-import android.view.View.OnLongClickListener
-
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -33,6 +30,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val action = intent.action
+
         sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE)
 
         if (sharedPreferences?.getString("fullscreen", "") == "true")
@@ -43,10 +42,13 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        val url = sharedPreferences?.getString("url", "")
+        val url: String =
+            if (action === "com.shamanayev.mobileweb.Main")
+                EnterUrlActivity.demoUrl
+            else
+                sharedPreferences?.getString("url", "").toString()
 
-        if (sharedPreferences?.getString("disableSelection", "") == "true")
-        {
+        if (sharedPreferences?.getString("disableSelection", "") == "true") {
             webView.setOnLongClickListener { true }
             webView.isLongClickable = false
         }

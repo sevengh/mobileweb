@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">เว็บแอป</string>
 
+    <!-- Shortcuts -->
+    <string name="settings">การตั้งค่า</string>
+    <string name="demo">เว็บไซต์สาธิต</string>
+
     <!--  Settings  -->
     <string name="settings_registerButton">ลงทะเบียน</string>
     <string name="settings_enter_url">ป้อน URL</string>
-    <string name="settings">การตั้งค่า</string>
     <string name="settings_hint">หากต้องการเปลี่ยน URL ให้กดไอคอนโปรแกรมค้างไว้แล้วเลือกการตั้งค่า</string>
     <string name="settings_hint_input">เริ่มด้วย http(s):// …</string>
     <string name="settings_wrong_url_text">ที่อยู่เว็บไซต์ไม่ถูกต้อง</string>

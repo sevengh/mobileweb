@@ -13,4 +13,21 @@
             android:targetPackage="com.shamanayev.mobileweb" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:shortcutDisabledMessage="@string/demo"
+        android:shortcutId="demo"
+        android:shortcutLongLabel="@string/demo"
+        android:shortcutShortLabel="@string/demo">
+        <intent
+            android:action="com.shamanayev.mobileweb.Main"
+            android:targetClass="com.shamanayev.mobileweb.MainActivity"
+            android:targetPackage="com.shamanayev.mobileweb">
+            <extra
+                android:name="demo"
+                android:value="true" />
+        </intent>
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
 </shortcuts>

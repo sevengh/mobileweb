@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">Aplicación Web</string>
 
+    <!-- Shortcuts -->
+    <string name="settings">Configuraciones</string>
+    <string name="demo">sitio web de demostración</string>
+
     <!--  Settings  -->
     <string name="settings_registerButton">Registrarse</string>
     <string name="settings_enter_url">Introducir URL</string>
-    <string name="settings">Configuraciones</string>
     <string name="settings_hint">Para cambiar la URL, mantenga presionado el ícono del programa y seleccione configuración</string>
     <string name="settings_hint_input">Empiece por http(s):// …</string>
     <string name="settings_wrong_url_text">Dirección de sitio incorrecta</string>

@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">웹 애플리케이션</string>
 
+    <!-- Shortcuts -->
+    <string name="settings">설정</string>
+    <string name="demo">데모 웹사이트</string>
+
     <!--  Settings  -->
     <string name="settings_registerButton">체크인</string>
     <string name="settings_enter_url">URL 입력</string>
-    <string name="settings">설정</string>
     <string name="settings_hint">URL을 변경하려면 앱 아이콘을 길게 누르고 설정을 선택하세요.</string>
     <string name="settings_hint_input">http(s)://... 로 시작</string>
     <string name="settings_wrong_url_text">잘못된 사이트 주소</string>

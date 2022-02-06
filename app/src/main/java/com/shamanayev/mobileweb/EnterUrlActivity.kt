@@ -14,6 +14,10 @@ class EnterUrlActivity : AppCompatActivity() {
 
     private var sharedPreferences: SharedPreferences? = null
 
+    companion object {
+        const val demoUrl = "https://www.shamanayev.tk/mobile-web/"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enter_url)
@@ -21,7 +25,7 @@ class EnterUrlActivity : AppCompatActivity() {
         sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE);
 
         enterSample.setOnClickListener {
-            urlEditText.setText("https://www.shamanayev.tk/mobile-web/")
+            urlEditText.setText(demoUrl)
         }
 
         autostart_checkbox.setOnClickListener {

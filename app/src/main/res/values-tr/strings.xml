@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">Internet uygulaması</string>
 
+    <!-- Shortcuts -->
+    <string name="settings">Ayarlar</string>
+    <string name="demo">demo web sitesi</string>
+
     <!--  Settings  -->
     <string name="settings_registerButton">Kayıt ol</string>
     <string name="settings_enter_url">URL girin</string>
-    <string name="settings">Ayarlar</string>
     <string name="settings_hint">URL\'yi değiştirmek için program simgesine basılı tutun ve ayarları seçin</string>
     <string name="settings_hint_input">http(s)//… ile başlayın</string>
     <string name="settings_wrong_url_text">Yanlış site adresi</string>

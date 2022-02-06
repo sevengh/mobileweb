@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">Aplicație web</string>
 
+    <!-- Shortcuts -->
+    <string name="settings">Setări</string>
+    <string name="demo">Site demonstrativ</string>
+
     <!--  Settings  -->
     <string name="settings_registerButton">Inregistreaza-te</string>
     <string name="settings_enter_url">Introdu URL-ul</string>
-    <string name="settings">Setări</string>
     <string name="settings_hint">Pentru a schimba adresa URL, țineți apăsată pictograma programului și selectați setările</string>
     <string name="settings_hint_input">Începeți cu http(s):// …</string>
     <string name="settings_wrong_url_text">Adresă incorectă a site-ului</string>

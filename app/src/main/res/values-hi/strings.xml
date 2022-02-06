@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">वेब अप्प</string>
 
+    <!-- Shortcuts -->
+    <string name="settings">समायोजन</string>
+    <string name="demo">डेमो वेबसाइट</string>
+
     <!--  Settings  -->
     <string name="settings_registerButton">रजिस्टर करें</string>
     <string name="settings_enter_url">यू आर एल दर्ज करो</string>
-    <string name="settings">समायोजन</string>
     <string name="settings_hint">URL बदलने के लिए, प्रोग्राम आइकन को दबाकर रखें और सेटिंग्स का चयन करें</string>
     <string name="settings_hint_input">http(s):// से शुरू करें</string>
     <string name="settings_wrong_url_text">गलत साइट का पता</string>

@@ -22,7 +22,8 @@
 
         <activity
             android:exported="true"
-            android:name=".SplashActivity"
+            android:name=".MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|layoutDirection|uiMode|smallestScreenSize"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,14 +33,6 @@
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/shortcuts" />
-
-        <activity
-            android:name=".MainActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|layoutDirection|uiMode|smallestScreenSize" />
 
         <activity
             android:name=".EnterUrlActivity"
