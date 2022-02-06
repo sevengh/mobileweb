@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_enter_url.*
-import java.util.*
 
 class EnterUrlActivity : AppCompatActivity() {
 
@@ -23,6 +22,19 @@ class EnterUrlActivity : AppCompatActivity() {
 
         enterSample.setOnClickListener {
             urlEditText.setText("https://www.shamanayev.tk/mobile-web/")
+        }
+
+        autostart_checkbox.setOnClickListener {
+            if (!autostart_checkbox.isChecked)
+                return@setOnClickListener
+
+            Toast
+                .makeText(
+                    this,
+                    getString(R.string.settings_application_autostart_hint),
+                    Toast.LENGTH_LONG
+                )
+                .show()
         }
 
         enterButton.setOnClickListener {

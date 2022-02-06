@@ -21,8 +21,9 @@
     <string name="settings_keepTheScreenOn">Ekranı açık tut</string>
     <string name="settings_keepInDomain">Site dışına erişimi engelle</string>
     <string name="settings_application_autostart">Uygulama otomatik başlatma</string>
+    <string name="settings_application_autostart_hint">Yalnızca belirli cihazlarda destek</string>
     <string name="settings_show_custom_error_page">Özel Hata Sayfasını Göster</string>
-    <string name="settings_disable_selection">Disable text selection</string>
+    <string name="settings_disable_selection">Metin seçimini devre dışı bırak</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

@@ -21,6 +21,7 @@
     <string name="settings_keepTheScreenOn">स्क्रीन चालू रखें</string>
     <string name="settings_keepInDomain">साइट के बाहर पहुंच को अवरुद्ध करें</string>
     <string name="settings_application_autostart">एप्लिकेशन ऑटोस्टार्ट</string>
+    <string name="settings_application_autostart_hint">केवल विशिष्ट उपकरणों पर समर्थन</string>
     <string name="settings_show_custom_error_page">कस्टम त्रुटि पृष्ठ दिखाएं</string>
     <string name="settings_disable_selection">टेक्स्ट चयन अक्षम करें</string>
 

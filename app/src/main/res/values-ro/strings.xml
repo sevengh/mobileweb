@@ -21,8 +21,9 @@
     <string name="settings_keepTheScreenOn">Păstrați ecranul aprins</string>
     <string name="settings_keepInDomain">Blocați accesul în afara site-ului</string>
     <string name="settings_application_autostart">Pornirea automată a aplicației</string>
+    <string name="settings_application_autostart_hint">Asistență numai pe anumite dispozitive</string>
     <string name="settings_show_custom_error_page">Afișați pagina de eroare personalizată</string>
-    <string name="settings_disable_selection">Disable text selection</string>
+    <string name="settings_disable_selection">Dezactivați selecția textului</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Siglă</string>
