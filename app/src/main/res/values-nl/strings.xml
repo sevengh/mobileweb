@@ -35,5 +35,6 @@
     <string name="noAccess">Geen toegang</string>
     <string name="noInternet">Geen internetverbinding of andere fout</string>
     <string name="reload">Herlaad deze pagina</string>
+    <string name="clickBack">Klik om terug te gaan</string>
 
 </resources>

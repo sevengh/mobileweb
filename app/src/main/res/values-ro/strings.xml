@@ -35,5 +35,6 @@
     <string name="noAccess">Fără acces</string>
     <string name="noInternet">Nu există conexiune la internet sau altă eroare</string>
     <string name="reload">Reîncărcați această pagină</string>
+    <string name="clickBack">Faceți clic pentru a reveni</string>
 
 </resources>

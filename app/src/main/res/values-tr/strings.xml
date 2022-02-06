@@ -35,5 +35,6 @@
     <string name="noAccess">Erişim yok</string>
     <string name="noInternet">İnternet bağlantısı yok veya başka bir hata</string>
     <string name="reload">Sayfayı yeniden yükle</string>
+    <string name="clickBack">Geri dönmek için tıklayın</string>
 
 </resources>

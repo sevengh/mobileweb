@@ -1,13 +1,13 @@
 <resources>
-    <!--  Settings theme  -->
-    <style name="SettingsTheme" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
+    <!--  Main theme  -->
+    <style name="MainTheme" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!--  Main theme  -->
-    <style name="MainTheme" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
+    <!--  Splash theme  -->
+    <style name="SplashTheme" parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="android:windowContentOverlay">@null</item>

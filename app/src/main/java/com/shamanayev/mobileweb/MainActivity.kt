@@ -76,17 +76,7 @@ class MainActivity : AppCompatActivity() {
                     } catch (e: Exception) {
                     }
 
-                    var string = ""
-
-                    try {
-                        val inputStream: InputStream = assets.open("check_internet.html")
-                        val size: Int = inputStream.available()
-                        val buffer = ByteArray(size)
-                        inputStream.read(buffer)
-                        string = String(buffer)
-                    } catch (e: IOException) {
-                        e.printStackTrace()
-                    }
+                    var string = loadHtml()
 
                     string = string
                         .replace("%noInternet%", getString(R.string.noInternet))
@@ -104,9 +94,15 @@ class MainActivity : AppCompatActivity() {
 
                 if (sharedPreferences?.getString("keepInDomain", "") == "true"
                     && !isSameDomain(url, request.url.toString())
-                )
-                    view.loadData(getString(R.string.noAccess), "text/html", "UTF-8")
-                else
+                ) {
+                    var string = loadHtml()
+
+                    string = string
+                        .replace("%noInternet%", getString(R.string.noAccess))
+                        .replace("%reload%", getString(R.string.clickBack))
+
+                    view.loadData(string, "text/html", "UTF-8")
+                } else
                     view.loadUrl(request.url.toString())
 
                 return false
@@ -187,6 +183,20 @@ class MainActivity : AppCompatActivity() {
         } else {
             this.webView.loadUrl(url)
         }
+    }
+
+    private fun loadHtml(): String {
+        try {
+            val inputStream: InputStream = assets.open("check_internet.html")
+            val size: Int = inputStream.available()
+            val buffer = ByteArray(size)
+            inputStream.read(buffer)
+            return String(buffer)
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+
+        return ""
     }
 
     fun requestVideoAccess() {

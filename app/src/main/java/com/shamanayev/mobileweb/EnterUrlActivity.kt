@@ -24,6 +24,11 @@ class EnterUrlActivity : AppCompatActivity() {
 
         sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE);
 
+        if (sharedPreferences?.getString("hideUrlOnSetup", "true") == "false") {
+            urlEditText.setText(sharedPreferences?.getString("url", ""))
+            hide_url_on_setup_checkbox.isChecked = false
+        }
+
         enterSample.setOnClickListener {
             urlEditText.setText(demoUrl)
         }
@@ -64,6 +69,7 @@ class EnterUrlActivity : AppCompatActivity() {
             val autostart = if (autostart_checkbox.isChecked) "true" else ""
             val showCustomErrorPage = if (showCustomErrorPage_checkbox.isChecked) "true" else ""
             val disableSelection = if (disableSelection_checkbox.isChecked) "true" else ""
+            val hideUrlOnSetup = if (hide_url_on_setup_checkbox.isChecked) "true" else "false"
 
             val editor = sharedPreferences?.edit()
             editor?.putString("url", uri)
@@ -75,6 +81,7 @@ class EnterUrlActivity : AppCompatActivity() {
             editor?.putString("autostart", autostart)
             editor?.putString("showCustomErrorPage", showCustomErrorPage)
             editor?.putString("disableSelection", disableSelection)
+            editor?.putString("hideUrlOnSetup", hideUrlOnSetup)
             editor?.apply()
 
             startActivity(

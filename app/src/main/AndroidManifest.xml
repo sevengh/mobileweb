@@ -21,9 +21,10 @@
         tools:targetApi="m">
 
         <activity
-            android:exported="true"
             android:name=".MainActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|layoutDirection|uiMode|smallestScreenSize">
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|layoutDirection|uiMode|smallestScreenSize"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -33,9 +34,7 @@
                 android:resource="@xml/shortcuts" />
         </activity>
 
-        <activity
-            android:name=".EnterUrlActivity"
-            android:theme="@style/SettingsTheme" />
+        <activity android:name=".EnterUrlActivity" />
 
         <receiver
             android:name=".BootUpReceiver"

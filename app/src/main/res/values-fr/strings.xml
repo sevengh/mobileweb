@@ -35,5 +35,6 @@
     <string name="noAccess">Pas d\'accès</string>
     <string name="noInternet">Pas de connexion internet ou autre erreur</string>
     <string name="reload">Recharger cette page</string>
+    <string name="clickBack">Cliquez pour revenir en arrière</string>
 
 </resources>

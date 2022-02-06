@@ -35,5 +35,6 @@
     <string name="noAccess">प्रवेश नही</string>
     <string name="noInternet">कोई इंटरनेट कनेक्शन या अन्य त्रुटि नहीं</string>
     <string name="reload">इस पृष्ठ को फिर रीलोड करें</string>
+    <string name="clickBack">वापस जाने के लिए क्लिक करें</string>
 
 </resources>

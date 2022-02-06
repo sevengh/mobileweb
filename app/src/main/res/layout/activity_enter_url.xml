@@ -19,9 +19,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
                 android:layout_marginStart="2dp"
                 android:layout_marginBottom="4dp"
-                android:layout_alignParentBottom="true"
                 android:text="@string/settings_enter_url" />
 
             <Button
@@ -71,7 +71,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:checked="true"
-            android:enabled="false"
             android:text="@string/settings_hide_url_on_setup" />
 
         <CheckBox
@@ -100,6 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:checked="true"
             android:text="@string/settings_keepInDomain" />
 
         <CheckBox
