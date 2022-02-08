@@ -2,7 +2,7 @@
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_settings_applications_24"
+        android:icon="@drawable/ic_baseline_settings_24"
         android:shortcutDisabledMessage="@string/settings"
         android:shortcutId="compose"
         android:shortcutLongLabel="@string/settings"

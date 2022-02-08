@@ -81,6 +81,7 @@ class MainActivity : AppCompatActivity() {
                 error: WebResourceError
             ) {
                 Log.d(tag, "onReceivedError request. Url: " + request.url.toString())
+                Log.d(tag, "onReceivedError request. error: $error")
 
                 if (sharedPreferences?.getString("showCustomErrorPage", "") == "true") {
                     try {

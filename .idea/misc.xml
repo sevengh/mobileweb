@@ -3,15 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable-v24/bg_splash.xml" value="0.181" />
+        <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.181" />
         <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable-v24/splash_background.xml" value="0.12" />
         <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable/button_blue_for_register.xml" value="0.22" />
         <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable/button_blue_round.xml" value="0.22" />
         <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable/button_orange_for_url.xml" value="0.1695" />
         <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable/button_sample_url.xml" value="0.22" />
+        <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable/edit_text_background.xml" value="0.181" />
         <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable/ic_baseline_clear_24.xml" value="0.1635" />
         <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1635" />
         <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable/ic_baseline_roofing_24.xml" value="0.1635" />
+        <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.181" />
         <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable/ic_baseline_settings_applications_24.xml" value="0.1635" />
+        <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.181" />
+        <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/drawable/ic_splash_name.xml" value="0.181" />
         <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/layout/activity_enter_url.xml" value="0.25" />
         <entry key="..\:/REPO/Project-MobileWeb/MobileWeb-Android/app/src/main/res/layout/activity_main.xml" value="0.29483695652173914" />
       </map>
