@@ -27,6 +27,7 @@
     <string name="settings_application_autostart_hint">Yalnızca belirli cihazlarda destek</string>
     <string name="settings_show_custom_error_page">Özel Hata Sayfasını Göster</string>
     <string name="settings_disable_selection">Metin seçimini devre dışı bırak</string>
+    <string name="settings_add_support_for_page_refresh">Sayfa yenileme desteği ekleyin</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>
@@ -36,5 +37,4 @@
     <string name="noInternet">İnternet bağlantısı yok veya başka bir hata</string>
     <string name="reload">Sayfayı yeniden yükle</string>
     <string name="clickBack">Geri dönmek için tıklayın</string>
-
 </resources>

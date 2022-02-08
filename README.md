@@ -8,6 +8,7 @@ Application based on WebView to create a mobile application with your website (w
 - Added restore settings
 - Added a backlink on the user's "No access" page
 - Added text hint to autorun option
+- Added swipe refresh
 - Slight redesign of the settings page
 - Hide URL at the next setting is now activated
 - Fixed "No Internet" page on android version 32

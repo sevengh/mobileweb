@@ -140,6 +140,13 @@
             android:checked="true"
             android:text="@string/settings_disable_selection" />
 
+        <CheckBox
+            android:id="@+id/refreshSupport_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/settings_add_support_for_page_refresh" />
+
         <Button
             android:id="@+id/enterButton"
             android:layout_width="match_parent"

@@ -27,6 +27,7 @@
     <string name="settings_application_autostart_hint">دعم فقط على أجهزة محددة</string>
     <string name="settings_show_custom_error_page">إظهار صفحة الخطأ المخصصة</string>
     <string name="settings_disable_selection">تعطيل اختيار النص</string>
+    <string name="settings_add_support_for_page_refresh">إضافة دعم لتحديث الصفحة</string>
 
     <!--  Splash  -->
     <string name="splash_logo">شعار</string>

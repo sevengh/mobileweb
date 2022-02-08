@@ -27,6 +27,7 @@
     <string name="settings_application_autostart_hint">Dukungan hanya pada perangkat tertentu</string>
     <string name="settings_show_custom_error_page">Tampilkan halaman kesalahan khusus</string>
     <string name="settings_disable_selection">Nonaktifkan pemilihan teks</string>
+    <string name="settings_add_support_for_page_refresh">Tambahkan dukungan untuk penyegaran halaman</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

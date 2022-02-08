@@ -15,6 +15,7 @@ import android.webkit.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 import java.io.InputStream
@@ -41,6 +42,17 @@ class MainActivity : AppCompatActivity() {
             window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         setContentView(R.layout.activity_main)
+
+        if (sharedPreferences?.getString("refreshSupport", "false") != "true")
+        {
+            swipeRefresh.isRefreshing = false
+            swipeRefresh.isEnabled = false
+        }
+
+        swipeRefresh.setOnRefreshListener {
+            webView.reload()
+            swipeRefresh.isRefreshing = false
+        }
 
         val url: String =
             if (action == "com.shamanayev.mobileweb.Main")

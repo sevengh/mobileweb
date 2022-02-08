@@ -27,6 +27,7 @@
     <string name="settings_application_autostart_hint">특정 기기에서만 지원</string>
     <string name="settings_show_custom_error_page">사용자 정의 오류 페이지 표시</string>
     <string name="settings_disable_selection">텍스트 선택 비활성화</string>
+    <string name="settings_add_support_for_page_refresh">페이지 새로 고침 지원 추가</string>
 
     <!--  Splash  -->
     <string name="splash_logo">심벌 마크</string>

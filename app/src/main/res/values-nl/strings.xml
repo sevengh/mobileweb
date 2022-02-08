@@ -27,6 +27,7 @@
     <string name="settings_application_autostart_hint">Ondersteuning alleen op specifieke apparaten</string>
     <string name="settings_show_custom_error_page">Aangepaste foutpagina weergeven</string>
     <string name="settings_disable_selection">Tekstselectie uitschakelen</string>
+    <string name="settings_add_support_for_page_refresh">Ondersteuning toevoegen voor paginavernieuwing</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

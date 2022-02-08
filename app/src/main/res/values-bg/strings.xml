@@ -27,6 +27,7 @@
     <string name="settings_application_autostart_hint">Поддръжка само на определени устройства</string>
     <string name="settings_show_custom_error_page">Показване на страница с персонализирани грешки</string>
     <string name="settings_disable_selection">Деактивирайте избора на текст</string>
+    <string name="settings_add_support_for_page_refresh">Добавете поддръжка за опресняване на страницата</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Лого</string>

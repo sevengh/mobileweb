@@ -27,6 +27,7 @@
     <string name="settings_application_autostart_hint">Unterstützung nur auf bestimmten Geräten</string>
     <string name="settings_show_custom_error_page">Benutzerdefinierte Fehlerseite anzeigen</string>
     <string name="settings_disable_selection">Textauswahl deaktivieren</string>
+    <string name="settings_add_support_for_page_refresh">Unterstützung für die Seitenaktualisierung hinzufügen</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Logo</string>

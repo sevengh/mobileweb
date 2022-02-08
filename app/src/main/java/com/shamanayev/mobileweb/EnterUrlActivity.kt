@@ -60,6 +60,9 @@ class EnterUrlActivity : AppCompatActivity() {
         if (sharedPreferences?.getString("disableSelection", "true") == "false")
             disableSelection_checkbox.isChecked = false
 
+        if (sharedPreferences?.getString("refreshSupport", "false") == "true")
+            refreshSupport_checkbox.isChecked = true
+
         enterSample.setOnClickListener {
             urlEditText.setText(demoUrl)
         }
@@ -101,6 +104,7 @@ class EnterUrlActivity : AppCompatActivity() {
             val showCustomErrorPage = if (showCustomErrorPage_checkbox.isChecked) "true" else "false"
             val disableSelection = if (disableSelection_checkbox.isChecked) "true" else "false"
             val hideUrlOnSetup = if (hide_url_on_setup_checkbox.isChecked) "true" else "false"
+            val refreshSupport = if (refreshSupport_checkbox.isChecked) "true" else "false"
 
             val editor = sharedPreferences?.edit()
             editor?.putString("url", uri)
@@ -113,6 +117,7 @@ class EnterUrlActivity : AppCompatActivity() {
             editor?.putString("showCustomErrorPage", showCustomErrorPage)
             editor?.putString("disableSelection", disableSelection)
             editor?.putString("hideUrlOnSetup", hideUrlOnSetup)
+            editor?.putString("refreshSupport", refreshSupport)
             editor?.apply()
 
             startActivity(

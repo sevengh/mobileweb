@@ -27,6 +27,7 @@
     <string name="settings_application_autostart_hint">Поддержка только на определенных устройствах</string>
     <string name="settings_show_custom_error_page">Показать пользовательскую страницу ошибки</string>
     <string name="settings_disable_selection">Отключить выделение текста</string>
+    <string name="settings_add_support_for_page_refresh">Добавить поддержку обновления страницы</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Логотип</string>

@@ -27,6 +27,7 @@
     <string name="settings_application_autostart_hint">Asistență numai pe anumite dispozitive</string>
     <string name="settings_show_custom_error_page">Afișați pagina de eroare personalizată</string>
     <string name="settings_disable_selection">Dezactivați selecția textului</string>
+    <string name="settings_add_support_for_page_refresh">Adăugați suport pentru reîmprospătarea paginii</string>
 
     <!--  Splash  -->
     <string name="splash_logo">Siglă</string>

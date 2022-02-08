@@ -27,6 +27,7 @@
     <string name="settings_application_autostart_hint">केवल विशिष्ट उपकरणों पर समर्थन</string>
     <string name="settings_show_custom_error_page">कस्टम त्रुटि पृष्ठ दिखाएं</string>
     <string name="settings_disable_selection">टेक्स्ट चयन अक्षम करें</string>
+    <string name="settings_add_support_for_page_refresh">पृष्ठ ताज़ा करने के लिए समर्थन जोड़ें</string>
 
     <!--  Splash  -->
     <string name="splash_logo">प्रतीक चिन्ह</string>
