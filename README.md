@@ -2,7 +2,7 @@
 
 Application based on WebView to create a mobile application with your website (web app)
 
-## Version 1.17 (22)
+## Version 1.17 (23)
 - Added demo website
 - Added Hindi language
 - Added restore settings
