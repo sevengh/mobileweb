@@ -12,10 +12,10 @@ import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.webkit.*
+import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 import java.io.InputStream
@@ -43,8 +43,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        if (sharedPreferences?.getString("refreshSupport", "false") != "true")
-        {
+        if (sharedPreferences?.getString("refreshSupport", "false") != "true") {
             swipeRefresh.isRefreshing = false
             swipeRefresh.isEnabled = false
         }
@@ -168,6 +167,7 @@ class MainActivity : AppCompatActivity() {
         webSettings.userAgentString = userAgent
         webSettings.javaScriptEnabled = true
         webSettings.domStorageEnabled = true
+        webSettings.allowFileAccess = true
         webSettings.setAppCacheEnabled(true)
         webSettings.setAppCachePath(this.cacheDir.path)
         webSettings.cacheMode = WebSettings.LOAD_DEFAULT
@@ -176,6 +176,13 @@ class MainActivity : AppCompatActivity() {
         webSettings.mediaPlaybackRequiresUserGesture = false
 
         this.webView.webChromeClient = object : WebChromeClient() {
+            private val tag = "webChromeClient"
+
+            private var customView: View? = null
+            private var originalSystemUiVisibility = 0
+            private var originalOrientation = 0
+            private var customViewCallback: CustomViewCallback? = null
+
             override fun onPermissionRequest(request: PermissionRequest) {
                 for (r in request.resources) {
                     if (r.equals(PermissionRequest.RESOURCE_VIDEO_CAPTURE))
@@ -188,6 +195,41 @@ class MainActivity : AppCompatActivity() {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     request.grant(request.resources)
                 }
+            }
+
+            override fun onHideCustomView() {
+                Log.d(tag, "----- onHideCustomView()")
+
+                (window.decorView as FrameLayout).removeView(customView)
+                customView = null
+                window.decorView.systemUiVisibility = originalSystemUiVisibility
+                requestedOrientation = originalOrientation
+                customViewCallback!!.onCustomViewHidden()
+                customViewCallback = null
+            }
+
+            override fun onShowCustomView(
+                paramView: View,
+                paramCustomViewCallback: CustomViewCallback
+            ) {
+                Log.d(tag, "----- onShowCustomView()")
+
+                if (this.customView != null) {
+                    onHideCustomView()
+                    return
+                }
+
+                this.customView = paramView
+                this.originalSystemUiVisibility = window.decorView.systemUiVisibility
+                this.originalOrientation = requestedOrientation
+                this.customViewCallback = paramCustomViewCallback
+
+                (window.decorView as FrameLayout).addView(
+                    customView,
+                    FrameLayout.LayoutParams(-1, -1)
+                )
+
+                window.decorView.systemUiVisibility = 3846 or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
             }
         }
 
