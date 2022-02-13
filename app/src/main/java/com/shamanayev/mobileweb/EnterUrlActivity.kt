@@ -22,7 +22,7 @@ class EnterUrlActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enter_url)
 
-        sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE);
+        sharedPreferences = applicationContext.getSharedPreferences("settings", MODE_PRIVATE)
 
         if (sharedPreferences?.getString("hideUrlOnSetup", "true") == "false") {
             urlEditText.setText(sharedPreferences?.getString("url", ""))
@@ -83,7 +83,7 @@ class EnterUrlActivity : AppCompatActivity() {
         enterButton.setOnClickListener {
             val uri: String = urlEditText.text.toString()
 
-            if (uri.isBlank() || (!uri.startsWith("https://") && !uri.startsWith("http://"))) {
+            if (uri.isBlank() || (!uri.lowercase().startsWith("https://") && !uri.lowercase().startsWith("http://"))) {
                 Toast.makeText(this, getString(R.string.settings_wrong_url_text), Toast.LENGTH_LONG)
                     .show()
                 return@setOnClickListener
