@@ -198,7 +198,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onHideCustomView() {
-                Log.d(tag, "----- onHideCustomView()")
+                Log.d(tag, "onHideCustomView()")
 
                 (window.decorView as FrameLayout).removeView(customView)
                 customView = null
@@ -212,7 +212,7 @@ class MainActivity : AppCompatActivity() {
                 paramView: View,
                 paramCustomViewCallback: CustomViewCallback
             ) {
-                Log.d(tag, "----- onShowCustomView()")
+                Log.d(tag, "onShowCustomView()")
 
                 if (this.customView != null) {
                     onHideCustomView()
