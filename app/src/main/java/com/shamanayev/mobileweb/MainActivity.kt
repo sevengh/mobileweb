@@ -168,8 +168,6 @@ class MainActivity : AppCompatActivity() {
         webSettings.javaScriptEnabled = true
         webSettings.domStorageEnabled = true
         webSettings.allowFileAccess = true
-        webSettings.setAppCacheEnabled(true)
-        webSettings.setAppCachePath(this.cacheDir.path)
         webSettings.cacheMode = WebSettings.LOAD_DEFAULT
         webSettings.allowFileAccessFromFileURLs = true
         webSettings.allowUniversalAccessFromFileURLs = true
