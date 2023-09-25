@@ -15,7 +15,7 @@ class EnterUrlActivity : AppCompatActivity() {
     private var sharedPreferences: SharedPreferences? = null
 
     companion object {
-        const val demoUrl = "https://www.shamanayev.tk/mobile-web/"
+        const val demoUrl = "https://sites.google.com/view/sergeyshamanayev/mobile-web/"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -128,47 +128,26 @@ class EnterUrlActivity : AppCompatActivity() {
         }
 
         clear_text.setOnClickListener { urlEditText.setText("") }
-        cameraPermission.setOnClickListener { requestVideoAccess() }
-        microphonePermission.setOnClickListener { requestAudioAccess() }
+
+        cameraPermission.setOnClickListener { requestPermissionAccess(android.Manifest.permission.CAMERA) }
+        microphonePermission.setOnClickListener { requestPermissionAccess(android.Manifest.permission.RECORD_AUDIO) }
+        bluetoothPermission.setOnClickListener { requestPermissionAccess(android.Manifest.permission.BLUETOOTH) }
+        bluetoothPermission.setOnClickListener { requestPermissionAccess(android.Manifest.permission.BLUETOOTH_SCAN) }
+        bluetoothPermission.setOnClickListener { requestPermissionAccess(android.Manifest.permission.BLUETOOTH_CONNECT) }
+        bluetoothPermission.setOnClickListener { requestPermissionAccess(android.Manifest.permission.BLUETOOTH_ADMIN) }
+        bluetoothPermission.setOnClickListener { requestPermissionAccess(android.Manifest.permission.BLUETOOTH_ADVERTISE) }
     }
 
-    private fun requestVideoAccess() {
+    private fun requestPermissionAccess(access: String) {
         if (ContextCompat.checkSelfPermission(
                 this,
-                android.Manifest.permission.CAMERA
+                access
             )
             != PackageManager.PERMISSION_GRANTED
         ) {
             ActivityCompat.requestPermissions(
                 this,
-                arrayOf(android.Manifest.permission.CAMERA),
-                100
-            )
-
-            Toast.makeText(
-                this,
-                getString(R.string.settings_access_granted),
-                Toast.LENGTH_SHORT
-            ).show()
-        } else {
-            Toast.makeText(
-                this,
-                getString(R.string.settings_access_already_granted),
-                Toast.LENGTH_SHORT
-            ).show()
-        }
-    }
-
-    private fun requestAudioAccess() {
-        if (ContextCompat.checkSelfPermission(
-                this,
-                android.Manifest.permission.RECORD_AUDIO
-            )
-            != PackageManager.PERMISSION_GRANTED
-        ) {
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(android.Manifest.permission.RECORD_AUDIO),
+                arrayOf(access),
                 100
             )
 
